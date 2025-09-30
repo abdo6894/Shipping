@@ -1,0 +1,175 @@
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\appsettings.Development.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\appsettings.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\WebApi.exe
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\WebApi.deps.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\WebApi.runtimeconfig.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\WebApi.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\WebApi.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.csproj.AssemblyReference.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfoInputs.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfo.cs
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.csproj.CoreCompileInputs.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.build.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.development.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\staticwebassets\msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\staticwebassets\msbuild.build.WebApi.props
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WebApi.props
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WebApi.props
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.pack.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\scopedcss\bundle\WebApi.styles.css
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.csproj.CopyComplete
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\refint\WebApi.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\obj\Debug\net8.0\ref\WebApi.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Azure.Core.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Azure.Identity.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\EntityFramework.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\System.Drawing.Common.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\System.Memory.Data.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\System.Runtime.Caching.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\System.Security.Permissions.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\System.Windows.Extensions.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\BL.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\DAL.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Domains.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\BL.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\DAL.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\WebApi\bin\Debug\net8.0\Domains.pdb
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.csproj.AssemblyReference.cache
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfoInputs.cache
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfo.cs
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\refint\WebApi.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.pdb
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\appsettings.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\WebApi.staticwebassets.endpoints.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\WebApi.exe
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\WebApi.deps.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\WebApi.runtimeconfig.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\WebApi.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\WebApi.pdb
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\BL.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\DAL.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Domains.dll
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\BL.pdb
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\DAL.pdb
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\bin\Debug\net8.0\Domains.pdb
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\scopedcss\bundle\WebApi.styles.css
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.csproj.Up2Date
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
+C:\Users\win11\Desktop\Shipping\WebApi\WebApi\obj\Debug\net8.0\ref\WebApi.dll

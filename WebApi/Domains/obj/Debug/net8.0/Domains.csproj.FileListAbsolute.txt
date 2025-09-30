@@ -1,0 +1,24 @@
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\bin\Debug\net8.0\Domains.deps.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\bin\Debug\net8.0\Domains.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\bin\Debug\net8.0\Domains.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\obj\Debug\net8.0\Domains.csproj.AssemblyReference.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\obj\Debug\net8.0\Domains.GeneratedMSBuildEditorConfig.editorconfig
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\obj\Debug\net8.0\Domains.AssemblyInfoInputs.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\obj\Debug\net8.0\Domains.AssemblyInfo.cs
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\obj\Debug\net8.0\Domains.csproj.CoreCompileInputs.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\obj\Debug\net8.0\Domains.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\obj\Debug\net8.0\refint\Domains.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\obj\Debug\net8.0\Domains.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\Domains\obj\Debug\net8.0\ref\Domains.dll
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\bin\Debug\net8.0\Domains.deps.json
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\bin\Debug\net8.0\Domains.dll
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\bin\Debug\net8.0\Domains.pdb
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\obj\Debug\net8.0\Domains.csproj.AssemblyReference.cache
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\obj\Debug\net8.0\Domains.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\obj\Debug\net8.0\Domains.AssemblyInfoInputs.cache
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\obj\Debug\net8.0\Domains.AssemblyInfo.cs
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\obj\Debug\net8.0\Domains.csproj.CoreCompileInputs.cache
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\obj\Debug\net8.0\Domains.dll
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\obj\Debug\net8.0\refint\Domains.dll
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\obj\Debug\net8.0\Domains.pdb
+C:\Users\win11\Desktop\Shipping\WebApi\Domains\obj\Debug\net8.0\ref\Domains.dll
