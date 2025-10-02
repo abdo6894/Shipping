@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+Debug/
+Release/
+
+# Logs
+*.log
+
+# EF Migrations snapshot
+Migrations/
+
+# Others
+*.dbmdl
+*.bak
+*.vscode/

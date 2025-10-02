@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\DAL\\DAL.csproj": {}
+    "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\DAL\\DAL.csproj": {
+    "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\DAL\\DAL.csproj",
+        "projectPath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\win11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\DAL\\obj\\",
+        "outputPath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,11 +30,11 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\Domains\\Domains.csproj": {
-                "projectPath": "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\Domains\\Domains.csproj"
+              "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Domains\\Domains.csproj": {
+                "projectPath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Domains\\Domains.csproj"
               }
             }
           }
@@ -52,26 +52,32 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[9.0.9, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[9.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[9.0.9, )"
             }
           },
           "imports": [
@@ -94,14 +100,14 @@
         }
       }
     },
-    "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\Domains\\Domains.csproj": {
+    "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Domains\\Domains.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\Domains\\Domains.csproj",
+        "projectUniqueName": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Domains\\Domains.csproj",
         "projectName": "Domains",
-        "projectPath": "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\Domains\\Domains.csproj",
+        "projectPath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Domains\\Domains.csproj",
         "packagesPath": "C:\\Users\\win11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win11\\Desktop\\Shipping\\WebApi\\Domains\\obj\\",
+        "outputPath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Domains\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -112,7 +118,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -120,8 +126,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -138,12 +144,12 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
-            "Microsoft.AspNet.Identity.EntityFramework": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.2.4, )"
+              "version": "[9.0.9, )"
             }
           },
           "imports": [

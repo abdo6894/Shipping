@@ -1,6 +1,10 @@
+using BL.Mapping;
 using DAL.Data.DbContext;
+using DAL.Repositories.Implementations;
+using DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-
+using BL.Services.Interfaces.Generic;
+using SharedLiberary;
 namespace Ui
 {
     public class Program
@@ -11,8 +15,10 @@ namespace Ui
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<ShippingContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            RegisterationServiceHelper.RegisterationService(builder);   
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

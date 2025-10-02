@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Domains;
 
-public partial class TbShippment
+public partial class TbShippment : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public DateTime ShippingDate { get; set; }
 
     public Guid SenderId { get; set; }
@@ -34,17 +32,6 @@ public partial class TbShippment
     public double? TrackingNumber { get; set; }
 
     public Guid? ReferenceId { get; set; }
-
-    public int CurrentState { get; set; }
-
-    public DateTime CreatedDate { get; set; }
-
-    public Guid CreatedBy { get; set; }
-
-    public DateTime? UpdatedDate { get; set; }
-
-    public Guid? UpdatedBy { get; set; }
-
     public virtual TbPaymentMethod? PaymentMethod { get; set; }
 
     public virtual TbUserReciver Receiver { get; set; } = null!;
