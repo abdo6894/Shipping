@@ -8,17 +8,26 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Content Remove="appsettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="appsettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Serilog" Version="4.3.0" />
 		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
 		<PackageReference Include="Serilog.Sinks.MSSqlServer" Version="8.2.2" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.5" />
-		<PackageReference Include="AutoMapper" Version="15.0.1" />
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\BL\BL.csproj" />
-		<ProjectReference Include="..\SharedLiberary\SharedLiberary.csproj" />
+	  <ProjectReference Include="..\BL\BL.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -15,7 +15,9 @@ namespace BL.Dtos
         public string? CityEname { get; set; }
 
         public Guid CountryId { get; set; }
+        public string? CountryAname { get; set; }
 
-        public virtual TbCountry Country { get; set; } = null!;
+        public string? CountryEname { get; set; }
+  
     }
 }

@@ -42,12 +42,14 @@ namespace DAL.Repositories.Implementations
             }
         }
 
-        public bool ChangeStatus(Guid id, int status = 1)
+        public bool ChangeStatus(Guid id,Guid UserId, int status = 1)
         {
             try
             {
-                var entity= GetById(id);
+                var entity= GetByIdTracking(id);
                 entity.CurrentState = status;
+                entity.UpdatedBy = UserId;
+                entity.UpdatedDate = DateTime.UtcNow;
                 _context.SaveChanges();
                 return true;
             }
@@ -81,7 +83,8 @@ namespace DAL.Repositories.Implementations
         {
             try
             {
-                return _dbSet.ToList();
+
+                return _dbSet.Where(x=>x.CurrentState>0).ToList();
             }
             catch (Exception ex)
             {
@@ -94,7 +97,19 @@ namespace DAL.Repositories.Implementations
         {
             try
             {
-               return _dbSet.FirstOrDefault(e => e.Id == id)!;
+               return _dbSet.AsNoTracking().FirstOrDefault(e => e.Id == id)!;
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataAccessException(ex, $"Error Getting by Id for entity of type {typeof(T).Name}", _log);
+            }
+        }
+        public T GetByIdTracking(Guid id)
+        {
+            try
+            {
+                return _dbSet.FirstOrDefault(e => e.Id == id)!;
 
             }
             catch (Exception ex)
@@ -105,12 +120,14 @@ namespace DAL.Repositories.Implementations
 
         public bool Update(T entity)
         {
+ 
             try
             {
                 var dbData = GetById(entity.Id);
                 entity.CreatedDate = dbData.CreatedDate;
                 entity.CreatedBy = dbData.CreatedBy;
                 entity.UpdatedDate = DateTime.Now;
+                entity.CurrentState = dbData.CurrentState;
                 _context.Entry(entity).State = EntityState.Modified;
                 _context.SaveChanges();
                 return true;
@@ -119,7 +136,7 @@ namespace DAL.Repositories.Implementations
             {
                 throw new DataAccessException(ex, $"Error Updating for entity of type {typeof(T).Name}", _log);
             }
-
         }
+
     }
 }

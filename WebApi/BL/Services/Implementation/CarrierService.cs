@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BL.Dtos;
 using BL.Mapping;
+using BL.Services.Implementation.Generic;
 using BL.Services.Interfaces;
 using BL.Services.Interfaces.Generic;
 using DAL.Repositories.Interfaces;
@@ -19,7 +20,7 @@ namespace BL.Services.Implementation
 }// CarrierService.cs
 public class CarrierService : GenericService<TbCarrier, TbCarrierDto>, ICarrierService
 {
-    public CarrierService(IGenericRepository<TbCarrier> repository, IMappingService mapper)
-        : base(repository, mapper) { }
+    public CarrierService(IGenericRepository<TbCarrier> repository, IMappingService mapper, IUserService userService)
+        : base(repository, mapper, userService) { }
 }
 

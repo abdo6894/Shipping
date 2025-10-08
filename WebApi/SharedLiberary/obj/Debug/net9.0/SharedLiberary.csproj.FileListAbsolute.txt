@@ -2,12 +2,15 @@ D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\Shared
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\SharedLiberary.runtimeconfig.json
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\SharedLiberary.dll
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\SharedLiberary.pdb
+D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\AppResources.dll
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\BL.dll
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\DAL.dll
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\Domains.dll
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\BL.pdb
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\DAL.pdb
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\Domains.pdb
+D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\AppResources.pdb
+D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\bin\Debug\net9.0\ar\AppResources.resources.dll
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\obj\Debug\net9.0\SharedLiberary.csproj.AssemblyReference.cache
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\obj\Debug\net9.0\SharedLiberary.GeneratedMSBuildEditorConfig.editorconfig
 D:\MyProjects\FullProject\Shipping\WebApi\SharedLiberary\obj\Debug\net9.0\SharedLiberary.AssemblyInfoInputs.cache

@@ -16,15 +16,17 @@ namespace BL.Mapping
             _mapper = mapper;
         }
 
-        public TDestination Map<TDestination>(object source)
+        public TDestination Map<TSource, TDestination>(TSource source)
         {
-            return _mapper.Map<object, TDestination>(source);
+            return _mapper.Map<TSource, TDestination>(source);
         }
 
-        public List<TDestination> MapList<TDestination>(IEnumerable<object> source)
+
+        public List<TDestination> MapList<TSource, TDestination>(IEnumerable<TSource> source)
         {
             return _mapper.Map<List<TDestination>>(source);
         }
+
     }
 
 }

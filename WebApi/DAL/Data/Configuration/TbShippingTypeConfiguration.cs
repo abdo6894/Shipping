@@ -14,14 +14,15 @@ namespace DAL.Data.Configuration
         public void Configure(EntityTypeBuilder<TbShippingType> entity)
         {
             entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
-            entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+            entity.Property(e => e.CreatedDate).HasColumnType("datetime2");
+            entity.Property(e => e.UpdatedDate).HasColumnType("datetime2");
+
             entity.Property(e => e.ShippingTypeAname)
                 .HasMaxLength(200)
                 .HasColumnName("ShippingTypeAName");
             entity.Property(e => e.ShippingTypeEname)
                 .HasMaxLength(200)
                 .HasColumnName("ShippingTypeEName");
-            entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
         }
     }
 }

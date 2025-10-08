@@ -3,7 +3,6 @@ using BL.Mapping;
 using DAL.Data.DbContext;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using SharedLiberary;
 
 namespace WebApi
 {
@@ -20,7 +19,18 @@ namespace WebApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            RegisterationServiceHelper.RegisterationService(builder);
+            // Sql Server
+            builder.Services.AddDbContext<ShippingContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+            );
+            // ÊÓÌíá Serilog
+            builder.Host.UseSerilog((context, services, configuration) =>
+            {
+                configuration.ReadFrom.Configuration(context.Configuration)
+                             .Enrich.FromLogContext()
+                             .WriteTo.Console();
+            });
+            builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
 
             var app = builder.Build();

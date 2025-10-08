@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Domains;
+﻿using Domains;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using DAL.UserModels;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 namespace DAL.Data.DbContext;
 
 public partial class ShippingContext : IdentityDbContext<ApplicationUser>
@@ -20,6 +20,7 @@ public partial class ShippingContext : IdentityDbContext<ApplicationUser>
     public virtual DbSet<TbCarrier> TbCarriers { get; set; }
 
     public virtual DbSet<TbCity> TbCities { get; set; }
+    public virtual DbSet<VwCitiy> VwCities { get; set; }
 
     public virtual DbSet<TbCountry> TbCountries { get; set; }
 

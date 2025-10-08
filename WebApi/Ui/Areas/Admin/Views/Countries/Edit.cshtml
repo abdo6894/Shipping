@@ -1,0 +1,46 @@
+﻿
+@model TbCountryDto
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> @Labels.Countries </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"></a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+            </ol>
+        </nav>
+    </div>
+
+    <form class="forms-sample" method="post" enctype="multipart/form-data"
+          asp-controller="Countries" asp-action="Save" role="form">
+        <div class="row">
+
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">@Labels.Countries</h4>
+                        <p class="card-description">  </p>
+
+                        <input asp-for="Id" type="hidden" />
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@Labels.NameAr</label>
+                            <input asp-for="CountryAname" type="text" class="form-control" placeholder="@Labels.NameAr">
+                            <span asp-validation-for="CountryAname" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@Labels.NameEn</label>
+                            <input asp-for="CountryEname" type="text" class="form-control" placeholder="@Labels.NameEn">
+                            <span asp-validation-for="CountryEname" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" formmethod="post" class="btn btn-gradient-primary me-2">@Actions.Save</button>
+                        <button type="reset" class="btn btn-light">@Actions.Clear</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

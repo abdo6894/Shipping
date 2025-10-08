@@ -13,8 +13,8 @@ namespace BL.Services.Interfaces.Generic
     {
         TDto GetById(Guid id);
         List<TDto> GetAll();
-        bool Add(TDto entity,Guid UserId);
-        bool Update(TDto entity, Guid UserId);
-        bool ChangeStatus(TDto entity, Guid UserId,int Status=1);
+        bool Add(TDto entity);
+        bool Update(TDto entity);
+        bool ChangeStatus( Guid UserId,int Status=1);
     }
 }

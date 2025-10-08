@@ -1,0 +1,163 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A517713-0A64-4B38-A63B-0E939D9600E5}|AppResources\\AppResources.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\appresources\\messages.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{8A517713-0A64-4B38-A63B-0E939D9600E5}|AppResources\\AppResources.csproj|solutionrelative:appresources\\messages.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A517713-0A64-4B38-A63B-0E939D9600E5}|AppResources\\AppResources.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\appresources\\shipping.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{8A517713-0A64-4B38-A63B-0E939D9600E5}|AppResources\\AppResources.csproj|solutionrelative:appresources\\shipping.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89410BA7-F608-4479-A6FA-E64653891E4F}|Ui\\Ui.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\ui\\areas\\admin\\views\\cities\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89410BA7-F608-4479-A6FA-E64653891E4F}|Ui\\Ui.csproj|solutionrelative:ui\\areas\\admin\\views\\cities\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89410BA7-F608-4479-A6FA-E64653891E4F}|Ui\\Ui.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\ui\\areas\\admin\\views\\cities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89410BA7-F608-4479-A6FA-E64653891E4F}|Ui\\Ui.csproj|solutionrelative:ui\\areas\\admin\\views\\cities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89410BA7-F608-4479-A6FA-E64653891E4F}|Ui\\Ui.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\ui\\areas\\admin\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89410BA7-F608-4479-A6FA-E64653891E4F}|Ui\\Ui.csproj|solutionrelative:ui\\areas\\admin\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\interfaces\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\interfaces\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\implementation\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\implementation\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Messages.resx",
+              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\AppResources\\Messages.resx",
+              "RelativeDocumentMoniker": "AppResources\\Messages.resx",
+              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\AppResources\\Messages.resx",
+              "RelativeToolTip": "AppResources\\Messages.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-10-08T02:03:01.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Shipping.resx",
+              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\AppResources\\Shipping.resx",
+              "RelativeDocumentMoniker": "AppResources\\Shipping.resx",
+              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\AppResources\\Shipping.resx",
+              "RelativeToolTip": "AppResources\\Shipping.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-10-08T02:02:53.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Ui\\Areas\\Admin\\Views\\Cities\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Ui\\Areas\\Admin\\Views\\Cities\\Edit.cshtml",
+              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Ui\\Areas\\Admin\\Views\\Cities\\Edit.cshtml",
+              "RelativeToolTip": "Ui\\Areas\\Admin\\Views\\Cities\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-08T02:02:11.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Ui\\Areas\\Admin\\Views\\Cities\\Index.cshtml",
+              "RelativeDocumentMoniker": "Ui\\Areas\\Admin\\Views\\Cities\\Index.cshtml",
+              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Ui\\Areas\\Admin\\Views\\Cities\\Index.cshtml",
+              "RelativeToolTip": "Ui\\Areas\\Admin\\Views\\Cities\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-08T02:01:01.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICityService.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Interfaces\\ICityService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\Interfaces\\ICityService.cs",
+              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Interfaces\\ICityService.cs",
+              "RelativeToolTip": "BL\\Services\\Interfaces\\ICityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T01:56:52.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CityService.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\CityService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\Implementation\\CityService.cs",
+              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\CityService.cs",
+              "RelativeToolTip": "BL\\Services\\Implementation\\CityService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T01:53:52.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CitiesController.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Ui\\Areas\\Admin\\Controllers\\CitiesController.cs",
+              "RelativeDocumentMoniker": "Ui\\Areas\\Admin\\Controllers\\CitiesController.cs",
+              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Ui\\Areas\\Admin\\Controllers\\CitiesController.cs",
+              "RelativeToolTip": "Ui\\Areas\\Admin\\Controllers\\CitiesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T01:51:39.704Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

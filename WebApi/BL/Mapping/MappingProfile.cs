@@ -14,6 +14,7 @@ namespace BL.Mapping
         public MappingProfile()
         {
             CreateMap<TbCity, TbCityDto>().ReverseMap();
+            CreateMap<VwCitiy, TbCityDto>().ReverseMap();
             CreateMap<TbCountry, TbCountryDto>().ReverseMap();
             CreateMap<TbPaymentMethod, TbPaymentMethodDto>().ReverseMap();
             CreateMap<TbSetting, TbSettingDto>().ReverseMap();
