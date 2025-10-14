@@ -18,9 +18,9 @@ namespace BL.Services.Implementation
     {
     }
 }// CarrierService.cs
-public class CarrierService : GenericService<TbCarrier, TbCarrierDto>, ICarrierService
+public class CarrierService : GenericService<Carrier, CarrierDto>, ICarrierService
 {
-    public CarrierService(IGenericRepository<TbCarrier> repository, IMappingService mapper, IUserService userService)
+    public CarrierService(IGenericRepository<Carrier> repository, IMappingService mapper, IUserService userService)
         : base(repository, mapper, userService) { }
 }
 

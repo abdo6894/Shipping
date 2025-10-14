@@ -1,5 +1,5 @@
 ﻿using BL.Dtos;
-using BL.Dtos.BL.Dtos;
+using BL.Dtos;
 using Domains;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -13,9 +13,10 @@ namespace BL.Services.Interfaces.Generic
     public interface IUserService
     {
         Task<UserResultDto> RegisterAsync(UserDto registerDto);
-        Task<UserResultDto> LoginAsync(UserDto loginDto);
+        Task<UserResultDto> LoginAsync(LoginDto loginDto);
         Task LogoutAsync();
         Task<UserDto> GetUserByIdAsync(string userId);
+        Task<UserDto> GetByEmailAsync(string email);
         Task<IEnumerable<UserDto>> GetAllUsersAsync();
         Guid GetLoggedInUser();
     }

@@ -17,10 +17,10 @@ namespace DAL.Repositories.Implementations
     public class GenericVwRepository<T> : IGenericVwRepository<T> where T : class
 
     {
-        private readonly ShippingContext _context;
+        private readonly ShipingContext _context;
         private readonly DbSet<T> _dbSet;
         private readonly ILogger<GenericVwRepository<T>> _log;
-        public GenericVwRepository(ShippingContext context, ILogger<GenericVwRepository<T>> log)
+        public GenericVwRepository(ShipingContext context, ILogger<GenericVwRepository<T>> log)
         {
             _context = context;
             _dbSet = _context.Set<T>();
@@ -53,7 +53,33 @@ namespace DAL.Repositories.Implementations
             }
         }
 
+        public T GetOrDefault(Expression<Func<T, bool>> filter)
+        {
+            try
+            {
+                return _dbSet.AsNoTracking().FirstOrDefault(filter)!;
 
+            }
+            catch (Exception ex)
+            {
+                throw new DataAccessException(ex, $"", _log);
+
+            }
+        }
+
+        public List<T> GetList(Expression<Func<T, bool>> filter = null)
+        {
+            try
+            {
+                return _dbSet.AsNoTracking().Where(filter).ToList();
+            }
+            catch (Exception ex)
+            {
+                _log.LogError(ex, "Error in GetList");
+                throw;
+            }
+
+        }
 
 
     }

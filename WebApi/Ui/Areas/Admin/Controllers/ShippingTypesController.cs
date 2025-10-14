@@ -8,25 +8,25 @@ namespace Ui.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize]
-    public class ShippingTypesController : Controller
+    public class ShipingTypesController : Controller
     {
-       private readonly IShippingTypeService _shippingTypeService;
-        public ShippingTypesController(IShippingTypeService shippingTypeService)
+       private readonly IShipingTypeService _shipingTypeService;
+        public ShipingTypesController(IShipingTypeService shipingTypeService)
         {
-            _shippingTypeService = shippingTypeService;
+            _shipingTypeService = shipingTypeService;
         }
         public IActionResult Index()
         {
-         var data= _shippingTypeService.GetAll();
+         var data= _shipingTypeService.GetAll();
             return View(data);
         }
         [HttpGet]
         public IActionResult Edit(Guid? Id)
         {
             if (Id == null || Id == Guid.Empty)
-                return View(new TbShippingTypeDto()); 
+                return View(new ShipingTypeDto()); 
 
-            var data = _shippingTypeService.GetById((Guid)Id); 
+            var data = _shipingTypeService.GetById((Guid)Id); 
             if (data == null) return NotFound();
 
             TempData["MessageTypes"] = null;
@@ -36,7 +36,7 @@ namespace Ui.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Save(TbShippingTypeDto data)
+        public IActionResult Save(ShipingTypeDto data)
         {
             TempData["MessageType"] = null;
             if (!ModelState.IsValid)
@@ -44,9 +44,9 @@ namespace Ui.Areas.Admin.Controllers
             try
             { 
                 if (data.Id == Guid.Empty)
-                    _shippingTypeService.Add(data);
+                    _shipingTypeService.Add(data);
                 else
-                    _shippingTypeService.Update(data);
+                    _shipingTypeService.Update(data);
                 TempData["MessageType"] =(int) MessageTypes.SaveSucess;
             }
             catch
@@ -63,7 +63,7 @@ namespace Ui.Areas.Admin.Controllers
         {
             try
             {
-                _shippingTypeService.ChangeStatus(Id, 0);
+                _shipingTypeService.ChangeStatus(Id, 0);
                 TempData["MessageType"] =(int) MessageTypes.DeleteSuccess;
             }
             catch

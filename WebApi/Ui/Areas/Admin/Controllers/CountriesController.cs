@@ -24,7 +24,7 @@ namespace Ui.Areas.Admin.Controllers
         public IActionResult Edit(Guid? Id)
         {
             if (Id == null || Id == Guid.Empty)
-                return View(new TbCountryDto()); 
+                return View(new CountryDto()); 
 
             var data = _countryService.GetById((Guid)Id); 
             if (data == null) return NotFound();
@@ -36,7 +36,7 @@ namespace Ui.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Save(TbCountryDto data)
+        public IActionResult Save(CountryDto data)
         {
             TempData["MessageType"] = null;
             if (!ModelState.IsValid)

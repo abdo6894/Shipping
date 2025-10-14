@@ -1,8 +1,8 @@
-﻿@model TbShippingTypeDto
+﻿@model ShipingTypeDto
 
 <div class="content-wrapper">
     <div class="page-header">
-        <h3 class="page-title"> @Shipping.ShippingTypes </h3>
+        <h3 class="page-title"> @Shiping.ShippingTypes </h3>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#"></a></li>
@@ -18,26 +18,26 @@
             <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">@Shipping.ShippingTypes</h4>
+                        <h4 class="card-title">@Shiping.ShippingTypes</h4>
                         <p class="card-description">  </p>
 
                         <input asp-for="Id" type="hidden" />
                         <div class="form-group">
                             <label for="exampleInputUsername1">@Labels.NameAr</label>
-                            <input asp-for="ShippingTypeAname" type="text" class="form-control" placeholder="@Labels.NameAr">
-                            <span asp-validation-for="ShippingTypeAname" class="text-danger"></span>
+                            <input asp-for="ShipingTypeAname" type="text" class="form-control" placeholder="@Labels.NameAr">
+                            <span asp-validation-for="ShipingTypeAname" class="text-danger"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputUsername1">@Labels.NameEn</label>
-                            <input asp-for="ShippingTypeEname" type="text" class="form-control" placeholder="@Labels.NameEn">
-                            <span asp-validation-for="ShippingTypeEname" class="text-danger"></span>
+                            <input asp-for="ShipingTypeEname" type="text" class="form-control" placeholder="@Labels.NameEn">
+                            <span asp-validation-for="ShipingTypeEname" class="text-danger"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputUsername1">@Labels.Factor</label>
-                            <input asp-for="ShippingFactor" type="text" class="form-control" placeholder="@Labels.Factor">
-                            <span asp-validation-for="ShippingFactor" class="text-danger"></span>
+                            <input asp-for="ShipingFactor" type="text" class="form-control" placeholder="@Labels.Factor">
+                            <span asp-validation-for="ShipingFactor" class="text-danger"></span>
                         </div>
 
                         <button type="submit" formmethod="post" class="btn btn-gradient-primary me-2">@Actions.Save</button>

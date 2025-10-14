@@ -5,5 +5,5 @@ using Domains;
 namespace BL.Services.Interfaces
 {
     // ISubscriptionPackageService.cs
-    public interface ISubscriptionPackageService : IGenericService<TbSubscriptionPackage, TbSubscriptionPackageDto> { }
+    public interface ISubscriptionPackageService : IGenericService<SubscriptionPackage, SubscriptionPackageDto> { }
 }

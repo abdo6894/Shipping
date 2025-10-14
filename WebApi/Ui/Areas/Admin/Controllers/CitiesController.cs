@@ -28,7 +28,7 @@ namespace Ui.Areas.Admin.Controllers
             LoadCountries();
 
             if (Id == null || Id == Guid.Empty)
-                return View(new TbCityDto());
+                return View(new CityDto());
 
             var data = _CityService.GetById((Guid)Id);
             if (data == null) return NotFound();
@@ -40,7 +40,7 @@ namespace Ui.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Save(TbCityDto data)
+        public IActionResult Save(CityDto data)
         {
             TempData["MessageType"] = null;
             if (!ModelState.IsValid)

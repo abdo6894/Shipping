@@ -16,6 +16,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using System.Net.Http.Headers;
 using System.Reflection;
 
 
@@ -25,6 +26,11 @@ namespace Ui.Services
     {
         public static void RegisterationService(WebApplicationBuilder builder)
         {
+            builder.Services.AddHttpClient("ApiClient", client =>
+            {
+                // Base URL will be configured in GenericApiClient constructor using appsettings.json
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            });
             // Authentication
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
            .AddCookie(options =>
@@ -36,7 +42,7 @@ namespace Ui.Services
            });
 
             // Sql Server
-            builder.Services.AddDbContext<ShippingContext>(options =>
+            builder.Services.AddDbContext<ShipingContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
             );
 
@@ -48,7 +54,7 @@ namespace Ui.Services
                 options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.User.RequireUniqueEmail = true;
-            }).AddEntityFrameworkStores<ShippingContext>()
+            }).AddEntityFrameworkStores<ShipingContext>()
     .AddDefaultTokenProviders();
             builder.Services.AddAuthorization();
 
@@ -61,17 +67,20 @@ namespace Ui.Services
             });
 
             builder.Services.AddScoped<IMappingService, MappingService>();
+            builder.Services.AddScoped<GenericApiClient>();
+
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             builder.Services.AddScoped(typeof(IGenericVwRepository<>), typeof(GenericVwRepository<>));
             builder.Services.AddScoped(typeof(IGenericService<,>), typeof(GenericService<,>));
             builder.Services.AddScoped<ICarrierService, CarrierService>();
+            builder.Services.AddScoped<IRefreshTokenService, RefreshTokenService>();
             builder.Services.AddScoped<ICityService, CityService>();
             builder.Services.AddScoped<ICountryService, CountryService>();
             builder.Services.AddScoped<IPaymentMethodService, PaymentMethodService>();
             builder.Services.AddScoped<ISettingService, SettingService>();
-            builder.Services.AddScoped<IShippingTypeService, ShippingTypeService>();
-            builder.Services.AddScoped<IShippmentService, ShippmentService>();
-            builder.Services.AddScoped<IShippmentStatusService, ShippmentStatusService>();
+            builder.Services.AddScoped<IShipingTypeService, ShipingTypeService>();
+            builder.Services.AddScoped<IShipmentService, ShipmentService>();
+            builder.Services.AddScoped<IShipmentStatusService, ShipmentStatusService>();
             builder.Services.AddScoped<ISubscriptionPackageService, SubscriptionPackageService>();
             builder.Services.AddScoped<IUserReciverService, UserReciverService>();
             builder.Services.AddScoped<IUserSenderService, UserSenderService>();

@@ -7,9 +7,9 @@ using BL.Services.Interfaces.Generic;
 using DAL.Repositories.Interfaces;
 using Domains;
 // UserSenderService.cs
-public class UserSenderService : GenericService<TbUserSender, TbUserSenderDto>, IUserSenderService
+public class UserSenderService : GenericService<UserSender, UserSenderDto>, IUserSenderService
 {
-    public UserSenderService(IGenericRepository<TbUserSender> repository, IMappingService mapper, IUserService userService)
+    public UserSenderService(IGenericRepository<UserSender> repository, IMappingService mapper, IUserService userService)
         : base(repository, mapper, userService) { }
 }
 

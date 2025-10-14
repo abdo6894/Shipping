@@ -16,10 +16,10 @@ namespace DAL.Repositories.Implementations
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
-        private readonly ShippingContext _context;
+        private readonly ShipingContext _context;
         private readonly DbSet<T> _dbSet;
         private readonly ILogger<GenericRepository<T>> _log;
-        public GenericRepository(ShippingContext context, ILogger<GenericRepository<T>> log)
+        public GenericRepository(ShipingContext context, ILogger<GenericRepository<T>> log)
         {
             _context = context;
             _dbSet = _context.Set<T>();
@@ -117,6 +117,35 @@ namespace DAL.Repositories.Implementations
                 throw new DataAccessException(ex, $"Error Getting by Id for entity of type {typeof(T).Name}", _log);
             }
         }
+
+        public T GetOrDefault(Expression<Func<T, bool>> filter)
+        {
+            try
+            {
+                return _dbSet.AsNoTracking().FirstOrDefault(filter)!;
+
+            }
+            catch(Exception ex) 
+            {
+                throw new DataAccessException(ex, $"", _log);
+
+            }
+        }
+
+        public List<T> GetList(Expression<Func<T, bool>> filter = null)
+        {
+            try
+            {
+                    return _dbSet.AsNoTracking().Where(filter).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new DataAccessException(ex, "", _log);
+            }
+        }
+    
+
+
 
         public bool Update(T entity)
         {

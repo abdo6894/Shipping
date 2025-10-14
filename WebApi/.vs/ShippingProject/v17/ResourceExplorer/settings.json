@@ -11,8 +11,6 @@
     "ar"
   ],
   "VisibleColumnKeys": [
-    "name",
-    "ar",
-    "neutral-value"
+    "name"
   ]
 }

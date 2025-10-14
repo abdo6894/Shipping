@@ -5,5 +5,5 @@ using Domains;
 namespace BL.Services.Interfaces
 {
     // IUserReciverService.cs
-    public interface IUserReciverService : IGenericService<TbUserReciver, TbUserReciverDto> { }
+    public interface IUserReciverService : IGenericService<UserReciver, UserReciverDto> { }
 }

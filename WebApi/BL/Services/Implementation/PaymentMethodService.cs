@@ -7,9 +7,9 @@ using BL.Services.Interfaces.Generic;
 using DAL.Repositories.Interfaces;
 using Domains;
 // PaymentMethodService.cs
-public class PaymentMethodService : GenericService<TbPaymentMethod, TbPaymentMethodDto>, IPaymentMethodService
+public class PaymentMethodService : GenericService<PaymentMethod, PaymentMethodDto>, IPaymentMethodService
 {
-    public PaymentMethodService(IGenericRepository<TbPaymentMethod> repository, IMappingService mapper, IUserService userService)
+    public PaymentMethodService(IGenericRepository<PaymentMethod> repository, IMappingService mapper, IUserService userService)
         : base(repository, mapper, userService) { }
 }
 

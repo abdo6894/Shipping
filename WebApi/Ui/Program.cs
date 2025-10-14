@@ -60,7 +60,7 @@ namespace Ui
                 var services= scope.ServiceProvider;
                 var usermaneger = services.GetRequiredService<UserManager<ApplicationUser>>();
                 var rolemaneger = services.GetRequiredService<RoleManager<IdentityRole>>();
-                var dbcontext=services.GetRequiredService<ShippingContext>();
+                var dbcontext=services.GetRequiredService<ShipingContext>();
                  
                 // Apply migration
                 await dbcontext.Database.MigrateAsync();

@@ -5,8 +5,9 @@ using Domains;
 namespace BL.Services.Interfaces
 {
     // ICityService.cs
-    public interface ICityService : IGenericService<TbCity, TbCityDto>
+    public interface ICityService : IGenericService<City, CityDto>
     {
-        List<TbCityDto> GetAllCities();
+        List<CityDto> GetAllCities();
+        List<CityDto> GetByCountry(Guid countryId);
     }
 }

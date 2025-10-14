@@ -1,5 +1,5 @@
 ﻿
-@model TbCityDto
+@model CityDto
 
 <div class="content-wrapper">
     <div class="page-header">
@@ -37,7 +37,7 @@
 
 
                         <div class="form-group">
-                            <label for="exampleInputUsername1">@Shipping.CountryName</label>
+                            <label for="exampleInputUsername1">@Shiping.CountryName</label>
                             <select asp-for="CountryId" class="form-control"
                                     asp-items="@(new SelectList(ViewBag.Countries,"Id", "CountryAname"))">
                             </select>

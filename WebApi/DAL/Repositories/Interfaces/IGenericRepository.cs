@@ -17,5 +17,7 @@ namespace DAL.Repositories.Interfaces
         bool Update(T entity);
         bool Delete(Guid Id);
         bool ChangeStatus(Guid id,Guid UserId, int status=1);
+        T GetOrDefault(Expression<Func<T, bool>> filter);
+        List<T> GetList(Expression<Func<T, bool>> filter);
     }
 }

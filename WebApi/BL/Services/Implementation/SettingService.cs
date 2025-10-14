@@ -7,9 +7,9 @@ using BL.Services.Interfaces.Generic;
 using DAL.Repositories.Interfaces;
 using Domains;
 // SettingService.cs
-public class SettingService : GenericService<TbSetting, TbSettingDto>, ISettingService
+public class SettingService : GenericService<Setting, SettingDto>, ISettingService
 {
-    public SettingService(IGenericRepository<TbSetting> repository, IMappingService mapper, IUserService userService)
+    public SettingService(IGenericRepository<Setting> repository, IMappingService mapper, IUserService userService)
         : base(repository, mapper, userService) { }
 }
 

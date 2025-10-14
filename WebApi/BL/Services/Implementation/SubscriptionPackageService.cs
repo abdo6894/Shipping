@@ -7,9 +7,9 @@ using BL.Services.Interfaces.Generic;
 using DAL.Repositories.Interfaces;
 using Domains;
 // SubscriptionPackageService.cs
-public class SubscriptionPackageService : GenericService<TbSubscriptionPackage, TbSubscriptionPackageDto>, ISubscriptionPackageService
+public class SubscriptionPackageService : GenericService<SubscriptionPackage, SubscriptionPackageDto>, ISubscriptionPackageService
 {
-    public SubscriptionPackageService(IGenericRepository<TbSubscriptionPackage> repository, IMappingService mapper, IUserService userService)
+    public SubscriptionPackageService(IGenericRepository<SubscriptionPackage> repository, IMappingService mapper, IUserService userService)
         : base(repository, mapper, userService) { }
 }
 

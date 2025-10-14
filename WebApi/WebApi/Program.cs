@@ -1,55 +1,95 @@
-
-using BL.Mapping;
-using DAL.Data.DbContext;
+ï»¿using DAL.Data.DbContext;
+using Domains;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Serilog;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using WebAPI.Services;
 
-namespace WebApi
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddCors(options =>
 {
-    public class Program
+    options.AddPolicy("AllowFrontend", policy =>
     {
-        public static void Main(string[] args)
+        policy.WithOrigins(
+             "https://localhost:44391",
+            "https://localhost:7279"  // MVC via direct run   // MVC via IIS Express
+        ) // ðŸ‘ˆ Your MVC project URL
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials(); // ðŸ‘ˆ Required for cookies (refresh token)
+    });
+
+}); builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "Shipping API", Version = "v1" });
+
+    // ðŸ‘‡ Add Bearer Authorization to Swagger
+    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Please enter token like: Bearer {your token}",
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT"
+    });
+
+    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
         {
-            var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
-            // Sql Server
-            builder.Services.AddDbContext<ShippingContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-            );
-            // ÊÓÌíá Serilog
-            builder.Host.UseSerilog((context, services, configuration) =>
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
             {
-                configuration.ReadFrom.Configuration(context.Configuration)
-                             .Enrich.FromLogContext()
-                             .WriteTo.Console();
-            });
-            builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
-
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-
-            app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
-
-            app.MapControllers();
-
-            app.Run();
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
         }
-    }
+    });
+});
+
+
+RegisterationServiceHelper.RegisterationService(builder);
+
+
+var app = builder.Build();
+
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+app.UseHttpsRedirection();
+app.UseCors("AllowFrontend");
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers();
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var dbContext = services.GetRequiredService<ShipingContext>();
+    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+
+    // Apply migrations
+    await dbContext.Database.MigrateAsync();
+
+    // Seed initial data
+    await ContextConfig.SeedDataAsync(dbContext, userManager, roleManager);
+}
+
+app.Run();

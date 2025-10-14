@@ -12,6 +12,8 @@ namespace DAL.Repositories.Interfaces
     {
         T GetById(Guid id);
         List<T> GetAll();
+        T GetOrDefault(Expression<Func<T, bool>> filter);
+        List<T> GetList(Expression<Func<T, bool>> filter);
 
     }
 }

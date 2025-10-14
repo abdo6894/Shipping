@@ -7,9 +7,9 @@ using BL.Services.Interfaces.Generic;
 using DAL.Repositories.Interfaces;
 using Domains;
 // CountryService.cs
-public class CountryService : GenericService<TbCountry, TbCountryDto>, ICountryService
+public class CountryService : GenericService<Country, CountryDto>, ICountryService
 {
-    public CountryService(IGenericRepository<TbCountry> repository, IMappingService mapper, IUserService userService)
+    public CountryService(IGenericRepository<Country> repository, IMappingService mapper, IUserService userService)
         : base(repository, mapper, userService) { }
 }
 

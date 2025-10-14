@@ -13,18 +13,20 @@ namespace BL.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<TbCity, TbCityDto>().ReverseMap();
-            CreateMap<VwCitiy, TbCityDto>().ReverseMap();
-            CreateMap<TbCountry, TbCountryDto>().ReverseMap();
-            CreateMap<TbPaymentMethod, TbPaymentMethodDto>().ReverseMap();
-            CreateMap<TbSetting, TbSettingDto>().ReverseMap();
-            CreateMap<TbShippingType, TbShippingTypeDto>().ReverseMap();
-            CreateMap<TbShippment, TbShippmentDto>().ReverseMap();
-            CreateMap<TbShippmentStatus, TbShippmentStatusDto>().ReverseMap();
-            CreateMap<TbSubscriptionPackage, TbSubscriptionPackageDto>().ReverseMap();
-            CreateMap<TbUserReciver, TbUserReciverDto>().ReverseMap();
-            CreateMap<TbUserSender, TbUserSenderDto>().ReverseMap();
-            CreateMap<TbUserSubscription, TbUserSubscriptionDto>().ReverseMap();
+            CreateMap<City,CityDto>().ReverseMap();
+            CreateMap<VwCitiy, CityDto>().ReverseMap();
+            CreateMap<RefreshToken, RefreshTokenDto>().ReverseMap();
+            CreateMap<Country, CountryDto>().ReverseMap();
+            CreateMap<PaymentMethod, PaymentMethodDto>().ReverseMap();
+            CreateMap<Setting, SettingDto>().ReverseMap();
+            CreateMap<ShipingType, ShipingTypeDto>().ReverseMap();
+            CreateMap<ShipingPackging, ShipingPackgingDto>().ReverseMap();
+            CreateMap<Shipment, ShipmentDto>().ReverseMap();
+            CreateMap<ShipmentStatus, ShipmentStatusDto>().ReverseMap();
+            CreateMap<SubscriptionPackage, SubscriptionPackageDto>().ReverseMap();
+            CreateMap<UserReciver, UserReciverDto>().ReverseMap();
+            CreateMap<UserSender, UserSenderDto>().ReverseMap();
+            CreateMap<UserSubscription, UserSubscriptionDto>().ReverseMap();
         }
 
 

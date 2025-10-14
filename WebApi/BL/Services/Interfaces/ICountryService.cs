@@ -5,5 +5,5 @@ using Domains;
 namespace BL.Services.Interfaces
 {
     // ICountryService.cs
-    public interface ICountryService : IGenericService<TbCountry, TbCountryDto> { }
+    public interface ICountryService : IGenericService<Country, CountryDto> { }
 }

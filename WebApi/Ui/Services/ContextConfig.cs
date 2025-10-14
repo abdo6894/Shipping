@@ -7,7 +7,7 @@ namespace Ui.Services
     public class ContextConfig
     {
         private static readonly string SeedAdminEmail = "Abdullah@gmail.com";
-        public static async Task SeedDataAsync(ShippingContext context,
+        public static async Task SeedDataAsync(ShipingContext context,
             UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager)
         {
@@ -35,7 +35,10 @@ namespace Ui.Services
                     Id = id,
                     UserName = AdminEmail,
                     Email = AdminEmail,
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+                    FirstName="Abdullah",
+                    LastName="Hashem",
+                    Phone = "01063188954",
 
                 };
                 var resulet= await userManager.CreateAsync(AdminUser,"Abdullah304106@");

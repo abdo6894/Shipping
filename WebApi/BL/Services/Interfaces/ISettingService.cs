@@ -5,5 +5,5 @@ using Domains;
 namespace BL.Services.Interfaces
 {
     // ISettingService.cs
-    public interface ISettingService : IGenericService<TbSetting, TbSettingDto> { }
+    public interface ISettingService : IGenericService<Setting, SettingDto> { }
 }

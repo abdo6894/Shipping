@@ -5,5 +5,5 @@ using Domains;
 namespace BL.Services.Interfaces
 {
     // IPaymentMethodService.cs
-    public interface IPaymentMethodService : IGenericService<TbPaymentMethod, TbPaymentMethodDto> { }
+    public interface IPaymentMethodService : IGenericService<PaymentMethod, PaymentMethodDto> { }
 }

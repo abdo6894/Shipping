@@ -1,0 +1,109 @@
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\bin\Debug\net8.0\AppResources.deps.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\bin\Debug\net8.0\AppResources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\bin\Debug\net8.0\AppResources.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\bin\Debug\net8.0\ar\AppResources.resources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.ar.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.ar.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.GenerateResource.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.GeneratedMSBuildEditorConfig.editorconfig
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfoInputs.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfo.cs
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.CoreCompileInputs.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\ar\AppResources.resources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\refint\AppResources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\ref\AppResources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Sample Test\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.ar.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\bin\Debug\net8.0\AppResources.deps.json
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\bin\Debug\net8.0\AppResources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\bin\Debug\net8.0\AppResources.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\bin\Debug\net8.0\ar\AppResources.resources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Shipping.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.ar.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.ar.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.ar.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Shipping.ar.resources
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.GenerateResource.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.GeneratedMSBuildEditorConfig.editorconfig
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfoInputs.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfo.cs
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.CoreCompileInputs.cache
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\ar\AppResources.resources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\refint\AppResources.dll
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.pdb
+G:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\ref\AppResources.dll
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\bin\Debug\net8.0\AppResources.deps.json
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\bin\Debug\net8.0\AppResources.dll
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\bin\Debug\net8.0\AppResources.pdb
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\bin\Debug\net8.0\ar\AppResources.resources.dll
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.resources
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.resources
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.resources
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Shipping.resources
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.ar.resources
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.ar.resources
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.ar.resources
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.Shipping.ar.resources
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.GenerateResource.cache
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.GeneratedMSBuildEditorConfig.editorconfig
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfoInputs.cache
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfo.cs
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.CoreCompileInputs.cache
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\ar\AppResources.resources.dll
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.dll
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\refint\AppResources.dll
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\AppResources.pdb
+D:\Current Courses\Asp.net mvc core v1\Level 2\Samples\WebApi\AppResources\obj\Debug\net8.0\ref\AppResources.dll
+C:\Users\win11\Desktop\WebApi\AppResources\bin\Debug\net8.0\AppResources.deps.json
+C:\Users\win11\Desktop\WebApi\AppResources\bin\Debug\net8.0\AppResources.dll
+C:\Users\win11\Desktop\WebApi\AppResources\bin\Debug\net8.0\AppResources.pdb
+C:\Users\win11\Desktop\WebApi\AppResources\bin\Debug\net8.0\ar\AppResources.resources.dll
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.resources
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.resources
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.resources
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.Shipping.resources
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.ar.resources
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.ar.resources
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.ar.resources
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.Shipping.ar.resources
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.GenerateResource.cache
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfoInputs.cache
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfo.cs
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.CoreCompileInputs.cache
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\ar\AppResources.resources.dll
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.dll
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\refint\AppResources.dll
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\AppResources.pdb
+C:\Users\win11\Desktop\WebApi\AppResources\obj\Debug\net8.0\ref\AppResources.dll
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\bin\Debug\net8.0\AppResources.deps.json
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\bin\Debug\net8.0\AppResources.dll
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\bin\Debug\net8.0\AppResources.pdb
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\bin\Debug\net8.0\ar\AppResources.resources.dll
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.resources
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.resources
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.resources
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.Shiping.resources
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.Actions.ar.resources
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.Labels.ar.resources
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.Messages.ar.resources
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.Shiping.ar.resources
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.GenerateResource.cache
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfoInputs.cache
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.AssemblyInfo.cs
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.csproj.CoreCompileInputs.cache
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.sourcelink.json
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\ar\AppResources.resources.dll
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.dll
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\refint\AppResources.dll
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\AppResources.pdb
+D:\MyProjects\FullProject\Shipping\WebApi\AppResources\obj\Debug\net8.0\ref\AppResources.dll

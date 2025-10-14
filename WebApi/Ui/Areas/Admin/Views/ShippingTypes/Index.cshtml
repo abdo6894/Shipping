@@ -1,4 +1,4 @@
-﻿@model List<TbShippingTypeDto>
+﻿@model List<ShipingTypeDto>
 
 @section Styles
 {
@@ -9,10 +9,10 @@
 
 <div class="content-wrapper">
     <div class="page-header">
-        <h3 class="page-title"> @Shipping.ShippingTypes </h3>
+        <h3 class="page-title"> @Shiping.ShippingTypes </h3>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">@Shipping.ShippingTypes</a></li>
+                <li class="breadcrumb-item"><a href="#">@Shiping.ShippingTypes</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Data table</li>
             </ol>
         </nav>
@@ -46,9 +46,9 @@
                             @foreach (var shippingTypes in Model)
                             {
                                 <tr>
-                                    <td class="col-md-8"> @shippingTypes.ShippingTypeAname</td>
-                                    <td class="col-md-8"> @shippingTypes.ShippingTypeEname</td>
-                                    <td class="col-md-8"> @shippingTypes.ShippingFactor</td>
+                                    <td class="col-md-8"> @shippingTypes.ShipingTypeAname</td>
+                                    <td class="col-md-8"> @shippingTypes.ShipingTypeEname</td>
+                                    <td class="col-md-8"> @shippingTypes.ShipingFactor</td>
 
                                     <td class="col-md-4">
                                         <a style="height:max-content"
