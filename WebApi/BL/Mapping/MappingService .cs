@@ -20,7 +20,10 @@ namespace BL.Mapping
         {
             return _mapper.Map<TSource, TDestination>(source);
         }
-
+        public TDestination Map<TSource, TDestination>(TSource source, TDestination destination)
+        {
+            return _mapper.Map(source, destination);
+        }
 
         public List<TDestination> MapList<TSource, TDestination>(IEnumerable<TSource> source)
         {

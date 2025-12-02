@@ -6,7 +6,8 @@ using Ui.Models;
 namespace Ui.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
+
     public class HomeController : Controller
     {
        

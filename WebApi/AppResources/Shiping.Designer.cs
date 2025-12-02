@@ -205,11 +205,38 @@ namespace AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shipping Packging.
+        /// </summary>
+        public static string ShippingPackging {
+            get {
+                return ResourceManager.GetString("ShippingPackging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shipping Types.
         /// </summary>
         public static string ShippingTypes {
             get {
                 return ResourceManager.GetString("ShippingTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UserReciver.
+        /// </summary>
+        public static string UserReciver {
+            get {
+                return ResourceManager.GetString("UserReciver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UserSender.
+        /// </summary>
+        public static string UserSender {
+            get {
+                return ResourceManager.GetString("UserSender", resourceCulture);
             }
         }
     }

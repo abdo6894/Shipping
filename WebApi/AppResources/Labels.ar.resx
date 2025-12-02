@@ -142,4 +142,10 @@
     <value>المدن</value>
     <comment>Shipping types</comment>
   </data>
+  <data name="Shipments" xml:space="preserve">
+    <value>الشحنات</value>
+  </data>
+  <data name="Carrier" xml:space="preserve">
+    <value>الناقل</value>
+  </data>
 </root>

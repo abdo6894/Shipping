@@ -7,7 +7,7 @@ namespace BL.Services.Interfaces
     // ICityService.cs
     public interface ICityService : IGenericService<City, CityDto>
     {
-        List<CityDto> GetAllCities();
-        List<CityDto> GetByCountry(Guid countryId);
+       Task <List<CityDto>> GetAllCities();
+       Task< List<CityDto>> GetByCountry(Guid countryId);
     }
 }

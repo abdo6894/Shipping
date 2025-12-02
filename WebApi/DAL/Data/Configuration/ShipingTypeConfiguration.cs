@@ -19,10 +19,10 @@ namespace DAL.Data.Configuration
 
             entity.Property(e => e.ShipingTypeAname)
                 .HasMaxLength(200)
-                .HasColumnName("ShippingTypeAName");
+                .HasColumnName("ShipingTypeAName");
             entity.Property(e => e.ShipingTypeEname)
                 .HasMaxLength(200)
-                .HasColumnName("ShippingTypeEName");
+                .HasColumnName("ShipingTypeEName");
         }
     }
 }

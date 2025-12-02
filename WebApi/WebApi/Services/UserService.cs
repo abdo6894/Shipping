@@ -1,10 +1,11 @@
-﻿using BL.Services.Interfaces;
+﻿using BL.Dtos;
 using BL.Dtos;
+using BL.Services.Interfaces;
 using BL.Services.Interfaces.Generic;
 using Domains;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
-using BL.Dtos;
+using WebApi.Services;
 namespace WebAPI.Services
 {
     public class UserService : IUserService
@@ -12,14 +13,16 @@ namespace WebAPI.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        TokenService _tokenService;
 
         public UserService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
-            IHttpContextAccessor accessor)
+            IHttpContextAccessor accessor, TokenService tokenService)
         {
             _userManager = userManager;
 
             _signInManager = signInManager;
             _httpContextAccessor = accessor;
+            _tokenService = tokenService;
         }
 
         public async Task<UserResultDto> RegisterAsync(UserDto registerDto)
@@ -60,10 +63,10 @@ namespace WebAPI.Services
 
         public async Task<UserResultDto> LoginAsync(LoginDto loginDto)
         {
-            var result = await _signInManager.PasswordSignInAsync(loginDto.Email, loginDto.Password, false,false);
+            var result = await _signInManager.PasswordSignInAsync(loginDto.Email, loginDto.Password, true, false);
 
             if (!result.Succeeded)
-            { 
+            {
                 return new UserResultDto
                 {
                     Success = false,
@@ -71,9 +74,24 @@ namespace WebAPI.Services
                 };
             }
 
-            // Generate token (if needed) or return success
-            return new UserResultDto { Success = true, Token = "DummyTokenForNow" };
+            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            var userDto = new UserDto
+            {
+                Id = Guid.Parse(user.Id),
+                Email = user.Email,
+
+            };
+            // افترض أن عندك Inject لـ TokenService
+            var accessToken = _tokenService.GenerateAccessToken(userDto);
+
+            return new UserResultDto
+            {
+                Success = true,
+                Token = accessToken
+                
+            };
         }
+
 
 
         public async Task<UserDto> GetUserByIdAsync(string userId)

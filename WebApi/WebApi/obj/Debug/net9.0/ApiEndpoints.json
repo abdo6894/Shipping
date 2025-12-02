@@ -28,7 +28,7 @@
   {
     "ContainingType": "WebApi.Controllers.AuthController",
     "Method": "RefreshAccessToken",
-    "RelativePath": "api/Auth/refresh-access-token",
+    "RelativePath": "api/Auth/RefreshAccessToken",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -50,6 +50,52 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CarriersController",
+    "Method": "GetAll",
+    "RelativePath": "api/Carriers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[WebApi.Models.ApiResponse\u00601[[BL.Dtos.CarrierDto, BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.CarriersController",
+    "Method": "Get",
+    "RelativePath": "api/Carriers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi.Models.ApiResponse\u00601[[BL.Dtos.CarrierDto, BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "WebApi.Controllers.CitiesController",
@@ -100,7 +146,7 @@
   {
     "ContainingType": "WebApi.Controllers.CitiesController",
     "Method": "GetByCountry",
-    "RelativePath": "api/Cities/GetByCountry{id}",
+    "RelativePath": "api/Cities/GetByCountry/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -170,9 +216,55 @@
     ]
   },
   {
-    "ContainingType": "WebApi.Controllers.ShippingTypesController",
+    "ContainingType": "WebApi.Controllers.ShipingPackgingController",
     "Method": "GetAll",
-    "RelativePath": "api/ShippingTypes",
+    "RelativePath": "api/ShipingPackging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[WebApi.Models.ApiResponse\u00601[[BL.Dtos.ShipingPackgingDto, BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipingPackgingController",
+    "Method": "Get",
+    "RelativePath": "api/ShipingPackging/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi.Models.ApiResponse\u00601[[BL.Dtos.ShipingPackgingDto, BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipingTypesController",
+    "Method": "GetAll",
+    "RelativePath": "api/ShipingTypes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -190,9 +282,9 @@
     ]
   },
   {
-    "ContainingType": "WebApi.Controllers.ShippingTypesController",
+    "ContainingType": "WebApi.Controllers.ShipingTypesController",
     "Method": "Get",
-    "RelativePath": "api/ShippingTypes/{id}",
+    "RelativePath": "api/ShipingTypes/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -216,16 +308,22 @@
     ]
   },
   {
-    "ContainingType": "WebApi.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "List",
+    "RelativePath": "api/Shipments",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApi.WeatherForecast, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "WebApi.Models.ApiResponse\u00601[[SharedLiberary.Common.PageResulet\u00601[[BL.Dtos.ShipmentDto, BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Shared_Liberary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -233,7 +331,102 @@
         ],
         "StatusCode": 200
       }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "Post",
+    "RelativePath": "api/Shipments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "Show",
+    "RelativePath": "api/Shipments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi.Models.ApiResponse\u00601[[BL.Dtos.ShipmentDto, BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "ChangeStatus",
+    "RelativePath": "api/Shipments/ChangeStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "BL.Dtos.ShipmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "Create",
+    "RelativePath": "api/Shipments/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "BL.Dtos.ShipmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "Edit",
+    "RelativePath": "api/Shipments/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "BL.Dtos.ShipmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -70,6 +70,15 @@ namespace AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Carrier.
+        /// </summary>
+        public static string Carrier {
+            get {
+                return ResourceManager.GetString("Carrier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cities.
         /// </summary>
         public static string Cities {
@@ -120,6 +129,15 @@ namespace AppResources {
         public static string NameEn {
             get {
                 return ResourceManager.GetString("NameEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shipments.
+        /// </summary>
+        public static string Shipments {
+            get {
+                return ResourceManager.GetString("Shipments", resourceCulture);
             }
         }
         

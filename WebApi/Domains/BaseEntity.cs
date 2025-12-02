@@ -10,7 +10,7 @@ namespace Domains
     {
         public Guid Id { get; set; }
         public int CurrentState { get; set; }
-        public DateTime CreatedDate { get; set; } 
+        public DateTime CreatedDate { get; set; } = DateTime.UtcNow; 
         public Guid CreatedBy { get; set; } 
         public DateTime? UpdatedDate { get; set; }
         public Guid? UpdatedBy { get; set; }

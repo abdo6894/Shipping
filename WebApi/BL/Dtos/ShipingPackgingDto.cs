@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BL.Dtos
 {
-    public class ShipingPackgingDto
+    public class ShipingPackgingDto : BaseDto
     {
         public string? ShipingPackgingAname { get; set; }
 

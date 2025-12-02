@@ -165,7 +165,17 @@
   <data name="RoleRequired " xml:space="preserve">
     <value>Role is required. </value>
   </data>
+  <data name="ShippingPackging" xml:space="preserve">
+    <value>Shipping Packging</value>
+  </data>
   <data name="ShippingTypes" xml:space="preserve">
     <value>Shipping Types</value>
+  </data>
+  <data name="UserReciver" xml:space="preserve">
+    <value>UserReciver</value>
+    <comment>UserReciver</comment>
+  </data>
+  <data name="UserSender" xml:space="preserve">
+    <value>UserSender</value>
   </data>
 </root>

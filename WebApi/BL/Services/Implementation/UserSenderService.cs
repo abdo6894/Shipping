@@ -9,7 +9,15 @@ using Domains;
 // UserSenderService.cs
 public class UserSenderService : GenericService<UserSender, UserSenderDto>, IUserSenderService
 {
-    public UserSenderService(IGenericRepository<UserSender> repository, IMappingService mapper, IUserService userService)
-        : base(repository, mapper, userService) { }
+    IUnitOfWork _uow;
+
+    public UserSenderService(IGenericRepository<UserSender> repo, IMappingService mapper, IUserService userService,
+         IUnitOfWork uow)
+        : base(uow, mapper, userService)
+    {
+        _uow= uow;
+    }
+ 
 }
+
 

@@ -67,7 +67,7 @@
         }
       }
     },
-    "/api/Auth/refresh-access-token": {
+    "/api/Auth/RefreshAccessToken": {
       "post": {
         "tags": [
           "Auth"
@@ -87,6 +87,84 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Carriers": {
+      "get": {
+        "tags": [
+          "Carriers"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarrierDtoApiResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarrierDtoApiResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarrierDtoApiResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Carriers/{id}": {
+      "get": {
+        "tags": [
+          "Carriers"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarrierDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarrierDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarrierDtoApiResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -129,7 +207,7 @@
         }
       }
     },
-    "/api/Cities/GetByCountry{id}": {
+    "/api/Cities/GetByCountry/{id}": {
       "get": {
         "tags": [
           "Cities"
@@ -296,10 +374,88 @@
         }
       }
     },
-    "/api/ShippingTypes": {
+    "/api/ShipingPackging": {
       "get": {
         "tags": [
-          "ShippingTypes"
+          "ShipingPackging"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShipingPackgingDtoApiResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShipingPackgingDtoApiResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShipingPackgingDtoApiResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ShipingPackging/{id}": {
+      "get": {
+        "tags": [
+          "ShipingPackging"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShipingPackgingDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShipingPackgingDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShipingPackgingDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ShipingTypes": {
+      "get": {
+        "tags": [
+          "ShipingTypes"
         ],
         "responses": {
           "200": {
@@ -334,10 +490,10 @@
         }
       }
     },
-    "/api/ShippingTypes/{id}": {
+    "/api/ShipingTypes/{id}": {
       "get": {
         "tags": [
-          "ShippingTypes"
+          "ShipingTypes"
         ],
         "parameters": [
           {
@@ -374,41 +530,204 @@
         }
       }
     },
-    "/WeatherForecast": {
+    "/api/Shipments": {
       "get": {
         "tags": [
-          "WeatherForecast"
+          "Shipments"
         ],
-        "operationId": "GetWeatherForecast",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
+                  "$ref": "#/components/schemas/ShipmentDtoPageResuletApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
+                  "$ref": "#/components/schemas/ShipmentDtoPageResuletApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
+                  "$ref": "#/components/schemas/ShipmentDtoPageResuletApiResponse"
                 }
               }
             }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Shipments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Shipments/{id}": {
+      "get": {
+        "tags": [
+          "Shipments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShipmentDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShipmentDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShipmentDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Shipments/Create": {
+      "post": {
+        "tags": [
+          "Shipments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Shipments/Edit": {
+      "post": {
+        "tags": [
+          "Shipments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Shipments/ChangeStatus": {
+      "post": {
+        "tags": [
+          "Shipments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShipmentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -416,30 +735,75 @@
   },
   "components": {
     "schemas": {
+      "CarrierDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CurrentState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CarrierName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarrierDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "Success": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Data": {
+            "$ref": "#/components/schemas/CarrierDto"
+          },
+          "Errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CityDto": {
         "type": "object",
         "properties": {
-          "id": {
+          "Id": {
             "type": "string",
             "format": "uuid"
           },
-          "cityAname": {
+          "CurrentState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CityAname": {
             "type": "string",
             "nullable": true
           },
-          "cityEname": {
+          "CityEname": {
             "type": "string",
             "nullable": true
           },
-          "countryId": {
+          "CountryId": {
             "type": "string",
             "format": "uuid"
           },
-          "countryAname": {
+          "CountryAname": {
             "type": "string",
             "nullable": true
           },
-          "countryEname": {
+          "CountryEname": {
             "type": "string",
             "nullable": true
           }
@@ -449,17 +813,17 @@
       "CityDtoApiResponse": {
         "type": "object",
         "properties": {
-          "success": {
+          "Success": {
             "type": "boolean"
           },
-          "message": {
+          "Message": {
             "type": "string",
             "nullable": true
           },
-          "data": {
+          "Data": {
             "$ref": "#/components/schemas/CityDto"
           },
-          "errors": {
+          "Errors": {
             "type": "array",
             "items": {
               "type": "string"
@@ -472,15 +836,19 @@
       "CountryDto": {
         "type": "object",
         "properties": {
-          "id": {
+          "Id": {
             "type": "string",
             "format": "uuid"
           },
-          "countryAname": {
+          "CurrentState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CountryAname": {
             "type": "string",
             "nullable": true
           },
-          "countryEname": {
+          "CountryEname": {
             "type": "string",
             "nullable": true
           }
@@ -490,17 +858,17 @@
       "CountryDtoApiResponse": {
         "type": "object",
         "properties": {
-          "success": {
+          "Success": {
             "type": "boolean"
           },
-          "message": {
+          "Message": {
             "type": "string",
             "nullable": true
           },
-          "data": {
+          "Data": {
             "$ref": "#/components/schemas/CountryDto"
           },
-          "errors": {
+          "Errors": {
             "type": "array",
             "items": {
               "type": "string"
@@ -513,12 +881,60 @@
       "LoginDto": {
         "type": "object",
         "properties": {
-          "email": {
+          "Email": {
             "type": "string",
             "nullable": true
           },
-          "password": {
+          "Password": {
             "type": "string",
+            "nullable": true
+          },
+          "RememberMe": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShipingPackgingDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CurrentState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ShipingPackgingAname": {
+            "type": "string",
+            "nullable": true
+          },
+          "ShipingPackgingEname": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShipingPackgingDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "Success": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Data": {
+            "$ref": "#/components/schemas/ShipingPackgingDto"
+          },
+          "Errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           }
         },
@@ -527,19 +943,23 @@
       "ShipingTypeDto": {
         "type": "object",
         "properties": {
-          "id": {
+          "Id": {
             "type": "string",
             "format": "uuid"
           },
-          "shipingTypeAname": {
+          "CurrentState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ShipingTypeAname": {
             "type": "string",
             "nullable": true
           },
-          "shipingTypeEname": {
+          "ShipingTypeEname": {
             "type": "string",
             "nullable": true
           },
-          "shipingFactor": {
+          "ShipingFactor": {
             "type": "number",
             "format": "double"
           }
@@ -549,17 +969,193 @@
       "ShipingTypeDtoApiResponse": {
         "type": "object",
         "properties": {
-          "success": {
+          "Success": {
             "type": "boolean"
           },
-          "message": {
+          "Message": {
             "type": "string",
             "nullable": true
           },
-          "data": {
+          "Data": {
             "$ref": "#/components/schemas/ShipingTypeDto"
           },
-          "errors": {
+          "Errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShipmentDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CurrentState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ShipingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "DelivryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "SenderId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CarrierId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "ReceiverId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "SenderData": {
+            "$ref": "#/components/schemas/UserSenderDto"
+          },
+          "ReciverData": {
+            "$ref": "#/components/schemas/UserReciverDto"
+          },
+          "ShipingTypeId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ShipingPackgingId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Width": {
+            "type": "number",
+            "format": "double"
+          },
+          "Height": {
+            "type": "number",
+            "format": "double"
+          },
+          "Weight": {
+            "type": "number",
+            "format": "double"
+          },
+          "Length": {
+            "type": "number",
+            "format": "double"
+          },
+          "PackageValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "ShipingRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "PaymentMethodId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "UserSubscriptionId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "TrackingNumber": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ReferenceId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShipmentDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "Success": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Data": {
+            "$ref": "#/components/schemas/ShipmentDto"
+          },
+          "Errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShipmentDtoPageResulet": {
+        "type": "object",
+        "properties": {
+          "PageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "HasPrevious": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "HasNext": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "Data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ShipmentDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShipmentDtoPageResuletApiResponse": {
+        "type": "object",
+        "properties": {
+          "Success": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Data": {
+            "$ref": "#/components/schemas/ShipmentDtoPageResulet"
+          },
+          "Errors": {
             "type": "array",
             "items": {
               "type": "string"
@@ -571,75 +1167,167 @@
       },
       "UserDto": {
         "required": [
-          "confirmPassword",
-          "email",
-          "firstName",
-          "lastName",
-          "password",
-          "phone"
+          "ConfirmPassword",
+          "Email",
+          "FirstName",
+          "LastName",
+          "Password",
+          "Phone"
         ],
         "type": "object",
         "properties": {
-          "id": {
+          "Id": {
             "type": "string",
             "format": "uuid"
           },
-          "email": {
+          "CurrentState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Email": {
             "minLength": 1,
             "type": "string",
             "format": "email"
           },
-          "password": {
+          "Password": {
             "minLength": 6,
             "type": "string"
           },
-          "confirmPassword": {
+          "ConfirmPassword": {
             "minLength": 1,
             "type": "string"
           },
-          "firstName": {
+          "FirstName": {
             "maxLength": 50,
             "minLength": 0,
             "type": "string"
           },
-          "lastName": {
+          "LastName": {
             "maxLength": 50,
             "minLength": 0,
             "type": "string"
           },
-          "phone": {
+          "Phone": {
             "minLength": 1,
             "type": "string",
             "format": "tel"
           },
-          "role": {
+          "Role": {
             "type": "string",
             "nullable": true
           },
-          "returnUrl": {
+          "ReturnUrl": {
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "WeatherForecast": {
+      "UserReciverDto": {
         "type": "object",
         "properties": {
-          "date": {
+          "Id": {
             "type": "string",
-            "format": "date"
+            "format": "uuid"
           },
-          "temperatureC": {
+          "CurrentState": {
             "type": "integer",
             "format": "int32"
           },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
+          "UserId": {
+            "type": "string",
+            "format": "uuid"
           },
-          "summary": {
+          "ReceiverName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "PostalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Contact": {
+            "type": "string",
+            "nullable": true
+          },
+          "OtherAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "CityId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CountryId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Address": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserSenderDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CurrentState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SenderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "UserId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "PostalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Contact": {
+            "type": "string",
+            "nullable": true
+          },
+          "OtherAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsPress": {
+            "type": "boolean"
+          },
+          "CityId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CountryId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Address": {
             "type": "string",
             "nullable": true
           }

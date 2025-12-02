@@ -4,6 +4,7 @@ using BL.Services.Interfaces.Generic;
 using Domains;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using BL.Contract;
 namespace Ui.Services
 {
     public class UserService : IUserService
@@ -13,7 +14,8 @@ namespace Ui.Services
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public UserService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
-            IHttpContextAccessor accessor)
+            IHttpContextAccessor accessor,
+            IRefreshTokenRetriver refreshTokenRetriver)
         {
             _userManager = userManager;
 
@@ -32,7 +34,15 @@ namespace Ui.Services
             LastName=registerDto.LastName,Phone=registerDto.Phone};
 
             var result = await _userManager.CreateAsync(user, registerDto.Password);
-            var roleResult = await _userManager.AddToRoleAsync(user, registerDto.Role ?? "User");
+            if (!result.Succeeded)
+            {
+                return new UserResultDto
+                {
+                    Success = false,
+                    Errors = result.Errors?.Select(e => e.Description)
+                };
+            }
+                var roleResult = await _userManager.AddToRoleAsync(user, registerDto.Role ?? "User");
 
             if (!roleResult.Succeeded)
             {
@@ -53,7 +63,7 @@ namespace Ui.Services
         
         public async Task<UserResultDto> LoginAsync(LoginDto loginDto)
         {
-            var result = await _signInManager.PasswordSignInAsync(loginDto.Email, loginDto.Password, false, false);
+            var result = await _signInManager.PasswordSignInAsync(loginDto.Email, loginDto.Password, true, false);
 
             if (!result.Succeeded)
             { 
@@ -113,7 +123,7 @@ namespace Ui.Services
                 Id = Guid.Parse(u.Id),
                 Email = u.Email,
             });
-        }
+        } 
 
         public Guid GetLoggedInUser()
         {

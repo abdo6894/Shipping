@@ -13,6 +13,6 @@ namespace BL.Dtos
 
         public string? Notes { get; set; }
 
-        public Guid CarrierId { get; set; }
+
     }
 }

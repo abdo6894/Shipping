@@ -4,11 +4,13 @@
     "Projects": [
       {
         "Path": "Ui\\Ui.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "https"
       },
       {
         "Path": "WebApi\\WebApi.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "https"
       }
     ]
   }

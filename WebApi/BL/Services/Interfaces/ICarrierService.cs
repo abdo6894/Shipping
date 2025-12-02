@@ -10,4 +10,5 @@ using System.Threading.Tasks;
 namespace BL.Services.Interfaces
 {
     public interface ICarrierService : IGenericService<Carrier, CarrierDto> { }
+
 }

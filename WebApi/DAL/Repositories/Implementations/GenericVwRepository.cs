@@ -26,12 +26,12 @@ namespace DAL.Repositories.Implementations
             _dbSet = _context.Set<T>();
             _log = log;
         }
-        public List<T> GetAll()
+        public async Task<List<T>> GetAll()
         {
             try
             {
 
-                return _dbSet.AsNoTracking().ToList();
+                return await _dbSet.AsNoTracking().ToListAsync();
             }
             catch (Exception ex)
             {
@@ -40,11 +40,11 @@ namespace DAL.Repositories.Implementations
             }
         }
 
-        public T GetById(Guid id)
+        public async Task<T?> GetById(Guid id)
         {
             try
             {
-               return _dbSet.AsNoTracking().FirstOrDefault()!;
+               return await _dbSet.AsNoTracking().FirstOrDefaultAsync();
 
             }
             catch (Exception ex)
@@ -53,11 +53,11 @@ namespace DAL.Repositories.Implementations
             }
         }
 
-        public T GetOrDefault(Expression<Func<T, bool>> filter)
+        public async Task<T?> GetOrDefault(Expression<Func<T, bool>> filter)
         {
             try
             {
-                return _dbSet.AsNoTracking().FirstOrDefault(filter)!;
+                return await _dbSet.AsNoTracking().FirstOrDefaultAsync(filter);
 
             }
             catch (Exception ex)
@@ -67,11 +67,11 @@ namespace DAL.Repositories.Implementations
             }
         }
 
-        public List<T> GetList(Expression<Func<T, bool>> filter = null)
+        public async Task<List<T>> GetList(Expression<Func<T, bool>> filter)
         {
             try
             {
-                return _dbSet.AsNoTracking().Where(filter).ToList();
+                return await _dbSet.AsNoTracking().Where(filter).ToListAsync();
             }
             catch (Exception ex)
             {

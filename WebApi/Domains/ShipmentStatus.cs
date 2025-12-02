@@ -9,8 +9,5 @@ public partial class ShipmentStatus : BaseEntity
 
     public string? Notes { get; set; }
 
-    public Guid CarrierId { get; set; }
-    public virtual Carrier Carrier { get; set; } = null!;
-
     public virtual Shipment? Shippment { get; set; }
 }

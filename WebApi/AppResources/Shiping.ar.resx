@@ -165,7 +165,16 @@
   <data name="RoleRequired " xml:space="preserve">
     <value>الدور مطلوب.</value>
   </data>
+  <data name="ShippingPackging" xml:space="preserve">
+    <value>نوع الباقه</value>
+  </data>
   <data name="ShippingTypes" xml:space="preserve">
     <value>انواع الشحن</value>
+  </data>
+  <data name="UserReciver" xml:space="preserve">
+    <value>اسم المستلم</value>
+  </data>
+  <data name="UserSender" xml:space="preserve">
+    <value>اسم المرسل</value>
   </data>
 </root>

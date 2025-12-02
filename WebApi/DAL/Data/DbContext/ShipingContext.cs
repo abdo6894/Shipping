@@ -39,7 +39,7 @@ public partial class ShipingContext : IdentityDbContext<ApplicationUser>
 
     public virtual DbSet<UserReciver> TbUserReceivers { get; set; }
 
-    public virtual DbSet<UserSender> TbUserSebders { get; set; }
+    public virtual DbSet<UserSender> TbUserSenders { get; set; }
 
     public virtual DbSet<UserSubscription> TbUserSubscriptions { get; set; }
 

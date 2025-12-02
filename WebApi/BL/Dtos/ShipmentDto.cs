@@ -10,13 +10,15 @@ namespace BL.Dtos
     {
    
         public DateTime ShipingDate { get; set; }
+        public DateTime DelivryDate { get; set; }
 
         public Guid SenderId { get; set; }
-
+        public Guid? CarrierId { get; set; }
         public Guid ReceiverId { get; set; }
-
+        public UserSenderDto SenderData { get; set; }
+        public UserReciverDto ReciverData { get; set; }
         public Guid ShipingTypeId { get; set; }
-        public Guid? ShipingPackgingId { get; set; }
+        public Guid ShipingPackgingId { get; set; }
 
         public double Width { get; set; }
 

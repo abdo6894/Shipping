@@ -14,7 +14,7 @@ namespace Domains
         public string LastName { get; set; }
 
         public string Phone { get; set; }
-
+            
         public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
     }
 }

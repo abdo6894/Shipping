@@ -10,10 +10,10 @@ namespace DAL.Repositories.Interfaces
 {
     public interface IGenericVwRepository<T> where T : class 
     {
-        T GetById(Guid id);
-        List<T> GetAll();
-        T GetOrDefault(Expression<Func<T, bool>> filter);
-        List<T> GetList(Expression<Func<T, bool>> filter);
+        Task<T?> GetById(Guid id);
+        Task<List<T>> GetAll();
+        Task<T?> GetOrDefault(Expression<Func<T, bool>> filter);
+        Task<List<T>> GetList(Expression<Func<T, bool>> filter);
 
     }
 }

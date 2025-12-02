@@ -15,6 +15,7 @@ namespace BL.Services.Implementation.Generic
         where T : BaseEntity
         where TDto : class
     {
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IGenericRepository<T> _repository;
         private readonly IMappingService _mapper;
         private readonly IUserService _userService;
@@ -25,41 +26,51 @@ namespace BL.Services.Implementation.Generic
             _mapper = mapper;
             _userService = userService;
         }
+        public GenericService(IUnitOfWork unitOfWork, IMappingService mapper, IUserService userService)
+        {
+            _repository = unitOfWork.Repository<T>();
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+            _userService = userService;
+            _unitOfWork = unitOfWork;
+        }
 
-        public bool Add(TDto dto)
+        public async Task<(bool,Guid)> Add(TDto dto)
         {
             var entity = _mapper.Map<TDto, T>(dto);
-            entity.CreatedBy = _userService.GetLoggedInUser();
+            entity.CreatedBy =  _userService.GetLoggedInUser();
 
             if (entity.Id == Guid.Empty)
                 entity.Id = Guid.NewGuid();
             entity.CurrentState = 1;
 
-            return _repository.Add(entity);
+            return await  _repository.Add(entity);
         }
 
-        public bool ChangeStatus(Guid Id, int Status = 1)
+        public async Task<bool> ChangeStatus(Guid Id, int Status = 1)
         {
-            return _repository.ChangeStatus(Id,_userService.GetLoggedInUser(), Status);
+            return await _repository.ChangeStatus(Id,_userService.GetLoggedInUser(), Status);
         }
 
-        public List<TDto> GetAll()
+        public async Task<List<TDto>> GetAll()
         {
-            var entities = _repository.GetAll();
+            var entities = await _repository.GetAll();
             return _mapper.MapList<T, TDto>(entities);
         }
 
-        public TDto GetById(Guid id)
+        public async Task<TDto> GetById(Guid id)
         {
-            var entity = _repository.GetById(id);
+            var entity =  await _repository.GetById(id);
+            if(entity == null)
+                return null!;
             return _mapper.Map<T, TDto>(entity);
         }
 
-        public bool Update(TDto dto)
+        public async Task<bool> Update(TDto dto)
         {
             var entity = _mapper.Map<TDto, T>(dto);
             entity.UpdatedBy = _userService.GetLoggedInUser();
-            return _repository.Update(entity);
+            return await _repository.Update(entity);
         }
     }
 }

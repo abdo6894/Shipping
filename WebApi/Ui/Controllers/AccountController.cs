@@ -1,5 +1,4 @@
 ﻿using BL.Dtos;
-using BL.Dtos;
 using BL.Services.Interfaces.Generic;
 using Domains;
 using Microsoft.AspNetCore.Authorization;
@@ -16,19 +15,21 @@ namespace Ui.Controllers
        private readonly GenericApiClient _apiclient;
         private readonly IUserService _userService;
 
-        public AccountController(IUserService userService,GenericApiClient apiclient)
+        public AccountController(IUserService userService, GenericApiClient apiclient)
         {
             _userService = userService;
             _apiclient = apiclient;
         }
-        [HttpGet]
-        [AllowAnonymous]
         public IActionResult Login()
-        {
+        { 
             return View();
         }
-        [HttpGet]
-        [AllowAnonymous]
+        public async Task<IActionResult> Logout()
+        {
+            await _userService.LogoutAsync();
+            return RedirectToAction("Login");
+        }
+
         public IActionResult Register()
         {
             return View();
@@ -66,6 +67,12 @@ namespace Ui.Controllers
                     Secure = true,
                     Expires = DateTime.UtcNow.AddMinutes(15)  
                 });
+                Response.Cookies.Append("RefreshToken", apiResult?.RefreshToken, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    Expires = DateTime.UtcNow.AddDays(7)  // Adjust token expiry based on your needs
+                });
                 var dbuser= await _userService.GetByEmailAsync(user.Email);
                 if (dbuser.Role.Contains("Admin"))
                     return RedirectToRoute(new { area = "admin", controller = "Home", action = "Index" });
@@ -101,13 +108,11 @@ namespace Ui.Controllers
         }
 
 
-        [Authorize]
-
-        public async Task<IActionResult> Logout()
+        public IActionResult AccessDenied()
         {
-            await _userService.LogoutAsync();
-            return RedirectToAction("Login");
+            return View();
         }
     }
 }
+
 

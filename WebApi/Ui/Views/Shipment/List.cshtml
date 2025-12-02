@@ -1,0 +1,121 @@
+﻿
+<!-- Breadcroumbs start -->
+<div class="wshipping-content-block wshipping-breadcroumb inner-bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <h1>Shipment History</h1>
+                <a href="index.html" title="Home">Home</a> / Shipment History
+            </div>
+            <div class="col-12 col-lg-5 text-right">
+                <h4>
+                    We freight to all over the world
+                    The best logistic company, <span>FAST</span> and <span>SAFELY!</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcroumbs end -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-9">
+            <div class="order-list">
+                <h3>Your Shipment History</h3>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Tracking Number</th>
+                                <th>Order Date</th>
+                                <th>Shipping Value</th>
+                                <th>Sender Name</th>
+                                <th>Receiver Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="shipments-table-body">
+                            <!-- Data will be injected here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Right sidebar start -->
+        <div class="col-12 col-lg-3">
+            <div class="right-block left-menu menu-with-title mt60 mb15">
+                <h4 class="title-with-bg">Select Your Freight</h4>
+                <ul>
+                    <li class="active"><a href="" title="Air Freight Tracking">Air Freight Tracking</a></li>
+                    <li><a href="" title="Ocean Freight Tracking">Ocean Freight Tracking</a></li>
+                    <li><a href="" title="Road & Rail Freight Tracking">Road & Rail Freight Tracking</a></li>
+                </ul>
+            </div>
+            <a href="#" class="order-list-button">Your Order List</a>
+        </div>
+        <!-- Right sidebar end -->
+    </div>
+    <div id="pagination" class="mt-3 text-center"></div>
+
+    <a asp-controller="Account" asp-action="Logout" class="btn btn-primary">Logout</a>
+
+
+</div>
+
+<!-- Our Services Start -->
+
+<div class="wshipping-content-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-lg-3">
+                <div class="section-title wow fadeInUp">
+                    <h2>Our Services</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="single-service-item wow fadeInUp">
+                    <div class="service-item-bg service-bg-1"></div>
+                    <div class="service-content">
+                        <h3>Ocean Freight Shipping</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        <a href="" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        <div class="location_map"><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="single-service-item wow fadeInUp">
+                    <div class="service-item-bg service-bg-2"></div>
+                    <div class="service-content">
+                        <h3>Air Freight Shipping</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        <a href="" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        <div class="location_map"><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="single-service-item wow fadeInUp">
+                    <div class="service-item-bg service-bg-3"></div>
+                    <div class="service-content">
+                        <h3>Car Shipping</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        <a href="" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        <div class="location_map"><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Services end -->
+@section Scripts {
+    <script src="~/modules/apphelper.js"></script>
+    <script src="~/modules/apiclient.js"></script>
+    <script src="~/modules/shipment/shipmentsservice.js"></script>
+    <script src="~/modules/shipment/list.js"></script>
+}

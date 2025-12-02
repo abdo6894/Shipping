@@ -22,6 +22,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Domains\Domains.csproj" />
+		<ProjectReference Include="..\Shared_Liberary\Shared_Liberary.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -2,6 +2,7 @@
 using BL.Services.Interfaces;
 using DAL.Exceptions;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using WebApi.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -20,12 +21,12 @@ namespace WebApi.Controllers
             _logger = logger;
         }
         [HttpGet]
-        public ActionResult<List<ApiResponse<CityDto>>> GetAll()
+        public async Task<ActionResult<List<ApiResponse<CityDto>>>> GetAll()
         {
             try
             {
-                var data = _CitiyService.GetAllCities();
-                return Ok(ApiResponse<List<CityDto>>.SuccessResponse(data, "Shipping types retrieved successfully."));
+                var data = await _CitiyService.GetAllCities();
+                return Ok(ApiResponse<List<CityDto>>.SuccessResponse(data, "cities types retrieved successfully."));
             }
             catch (DataAccessException da)
             {
@@ -42,14 +43,14 @@ namespace WebApi.Controllers
 
 
         }
-        [HttpGet("GetByCountry{id}")]
+        [HttpGet("GetByCountry/{id}")]
 
-        public ActionResult<List<ApiResponse<CityDto>>> GetByCountry(Guid id)
+        public async Task<ActionResult<List<ApiResponse<CityDto>>>> GetByCountry(Guid id)
         {
             try
             {
-                var data = _CitiyService.GetByCountry(id);
-                return Ok(ApiResponse<List<CityDto>>.SuccessResponse(data, "Shipping types retrieved successfully."));
+                var data = await _CitiyService.GetByCountry(id);
+                return Ok(ApiResponse<List<CityDto>>.SuccessResponse(data, "cities types retrieved successfully."));
             }
             catch (DataAccessException da)
             {
@@ -68,12 +69,12 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<ApiResponse<CityDto>> Get(Guid id)
+        public async Task<ActionResult<ApiResponse<CityDto>>> Get(Guid id)
         {
             try
             {
-                var data = _CitiyService.GetById(id);
-                return Ok(ApiResponse<CityDto>.SuccessResponse(data, "Shipping types retrieved successfully."));
+                var data = await _CitiyService.GetById(id);
+                return Ok(ApiResponse<CityDto>.SuccessResponse(data, "cities types retrieved successfully."));
             }
             catch (DataAccessException da)
             {

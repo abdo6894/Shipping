@@ -3,7 +3,9 @@ D:\MyProjects\FullProject\Shipping\WebApi\DAL\bin\Debug\net9.0\DAL.runtimeconfig
 D:\MyProjects\FullProject\Shipping\WebApi\DAL\bin\Debug\net9.0\DAL.dll
 D:\MyProjects\FullProject\Shipping\WebApi\DAL\bin\Debug\net9.0\DAL.pdb
 D:\MyProjects\FullProject\Shipping\WebApi\DAL\bin\Debug\net9.0\Domains.dll
+D:\MyProjects\FullProject\Shipping\WebApi\DAL\bin\Debug\net9.0\Shared_Liberary.dll
 D:\MyProjects\FullProject\Shipping\WebApi\DAL\bin\Debug\net9.0\Domains.pdb
+D:\MyProjects\FullProject\Shipping\WebApi\DAL\bin\Debug\net9.0\Shared_Liberary.pdb
 D:\MyProjects\FullProject\Shipping\WebApi\DAL\obj\Debug\net9.0\DAL.csproj.AssemblyReference.cache
 D:\MyProjects\FullProject\Shipping\WebApi\DAL\obj\Debug\net9.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
 D:\MyProjects\FullProject\Shipping\WebApi\DAL\obj\Debug\net9.0\DAL.AssemblyInfoInputs.cache

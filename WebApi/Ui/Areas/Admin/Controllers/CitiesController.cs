@@ -2,6 +2,7 @@
 using BL.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using Ui.Helpers;
 
 namespace Ui.Areas.Admin.Controllers
@@ -17,20 +18,20 @@ namespace Ui.Areas.Admin.Controllers
             _CityService = cityService;
             _CountryService = countryService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _CityService.GetAllCities();
+            var data = await _CityService.GetAllCities();
             return View(data);
         }
         [HttpGet]
-        public IActionResult Edit(Guid? Id)
+        public async Task<IActionResult> Edit(Guid? Id)
         {
-            LoadCountries();
-
+           await LoadCountries();
+           
             if (Id == null || Id == Guid.Empty)
                 return View(new CityDto());
 
-            var data = _CityService.GetById((Guid)Id);
+            var data = await _CityService.GetById((Guid)Id);
             if (data == null) return NotFound();
 
             TempData["MessageTypes"] = null;
@@ -66,11 +67,11 @@ namespace Ui.Areas.Admin.Controllers
 
 
         }
-        public IActionResult Delete(Guid Id)
+        public async Task<IActionResult> Delete(Guid Id)
         {
             try
             {
-                _CityService.ChangeStatus(Id, 0);
+              await  _CityService.ChangeStatus(Id, 0);
                 TempData["MessageType"] = (int)MessageTypes.DeleteSuccess;
             }
             catch
@@ -80,9 +81,9 @@ namespace Ui.Areas.Admin.Controllers
 
             return RedirectToAction("Index");
         }
-        void LoadCountries()
+        async Task LoadCountries()
         {
-           var Countries= _CountryService.GetAll();
+           var Countries= await _CountryService.GetAll();
             ViewBag.Countries = Countries;
 
         }

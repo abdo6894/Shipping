@@ -6,13 +6,14 @@ namespace Domains;
 public partial class Shipment : BaseEntity
 {
     public DateTime ShipingDate { get; set; }
+    public DateTime DelivryDate { get; set; }
 
     public Guid SenderId { get; set; }
 
     public Guid ReceiverId { get; set; }
 
     public Guid ShipingTypeId { get; set; }
-    public Guid? ShipingPackgingId { get; set; }
+    public Guid ShipingPackgingId { get; set; }
     public double Width { get; set; }
 
     public double Height { get; set; }
@@ -30,10 +31,10 @@ public partial class Shipment : BaseEntity
     public Guid? UserSubscriptionId { get; set; }
 
     public double? TrackingNumber { get; set; }
-
+    public Guid? CarrierId { get; set; }
     public Guid? ReferenceId { get; set; }
     public virtual PaymentMethod? PaymentMethod { get; set; }
-
+    public virtual Carrier Carrier { get; set; } = null!;
     public virtual UserReciver Receiver { get; set; } = null!;
 
     public virtual UserSender Sender { get; set; } = null!;

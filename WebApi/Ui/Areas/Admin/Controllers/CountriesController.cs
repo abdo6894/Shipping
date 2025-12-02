@@ -2,6 +2,7 @@
 using BL.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using Ui.Helpers;
 
 namespace Ui.Areas.Admin.Controllers
@@ -15,18 +16,18 @@ namespace Ui.Areas.Admin.Controllers
         {
             _countryService = countryService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-         var data= _countryService.GetAll();
+         var data= await _countryService.GetAll();
             return View(data);
         }
         [HttpGet]
-        public IActionResult Edit(Guid? Id)
+        public async Task<IActionResult> Edit(Guid? Id)
         {
             if (Id == null || Id == Guid.Empty)
                 return View(new CountryDto()); 
 
-            var data = _countryService.GetById((Guid)Id); 
+            var data = await _countryService.GetById((Guid)Id); 
             if (data == null) return NotFound();
 
             TempData["MessageTypes"] = null;
@@ -36,7 +37,7 @@ namespace Ui.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Save(CountryDto data)
+        public async Task<IActionResult> Save(CountryDto data)
         {
             TempData["MessageType"] = null;
             if (!ModelState.IsValid)
@@ -44,9 +45,9 @@ namespace Ui.Areas.Admin.Controllers
             try
             { 
                 if (data.Id == Guid.Empty)
-                    _countryService.Add(data);
+                  await  _countryService.Add(data);
                 else
-                    _countryService.Update(data);
+                   await _countryService.Update(data);
                 TempData["MessageType"] =(int) MessageTypes.SaveSucess;
             }
             catch
@@ -59,11 +60,11 @@ namespace Ui.Areas.Admin.Controllers
 
             
         }
-        public IActionResult Delete(Guid Id)
+        public async Task<IActionResult> Delete(Guid Id)
         {
             try
             {
-                _countryService.ChangeStatus(Id, 0);
+               await _countryService.ChangeStatus(Id, 0);
                 TempData["MessageType"] =(int) MessageTypes.DeleteSuccess;
             }
             catch

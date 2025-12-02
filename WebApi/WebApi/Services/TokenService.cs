@@ -13,7 +13,7 @@ namespace WebApi.Services
         private readonly string _secretKey;
         private readonly string _issuer;
         private readonly string _audience;
-        private const int AccessTokenExpiryMinutes = 15;
+        private readonly int AccessTokenExpiryMinutes;
         private const int RefreshTokenExpiryDays = 7;
 
         public TokenService(IConfiguration configuration)
@@ -22,30 +22,37 @@ namespace WebApi.Services
             _secretKey = configuration["Jwt:Key"];
             _issuer = configuration["Jwt:Issuer"];
             _audience = configuration["Jwt:Audience"];
+            AccessTokenExpiryMinutes = int.Parse(configuration["Jwt:DurationInMinutes"] ?? "60");
         }
 
         public string GenerateAccessToken(UserDto user)
         {
-            var claims = new[]
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+        new Claim(ClaimTypes.Email, user.Email)
+    };
+
+            if (!string.IsNullOrEmpty(user.Role))
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, "User")
-            };
+                claims.Add(new Claim(ClaimTypes.Role, user.Role));
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var expires = DateTimeOffset.UtcNow.AddMinutes(AccessTokenExpiryMinutes);
 
             var token = new JwtSecurityToken(
-                issuer: _issuer,                   // ✅ مطابق لإعدادات Jwt
-                audience: _audience,               // ✅ مطابق لإعدادات Jwt
+                issuer: _issuer,
+                audience: _audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(AccessTokenExpiryMinutes),
+                expires: expires.UtcDateTime,
                 signingCredentials: credentials
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
 
         public string GenerateRefreshToken()
         {

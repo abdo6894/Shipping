@@ -127,7 +127,7 @@
                                 <a href="services.html">Services</a>
                             </li>
                             <li>
-                                <a href="create-shipping.html">Shipping</a>
+                                <a asp-controller="Shipment" asp-action="Create">Shipping</a>
                             </li>
                             <li>
                                 <a href="blog.html">Blog</a>
@@ -136,7 +136,7 @@
                                 <a href="contact.html">Contuct Us</a>
                             </li>
                             <li>
-                                <a href="profile.html"><img class="header-profile-pic" src="~/FrontEnd/images/profile.jpg"> Profile</a>
+                                <a asp-controller="Shipment" asp-action="List" img class="header-profile-pic" src="~/FrontEnd/images/profile.jpg"> Profile</a>
                             </li>
                         </ul>
                     </nav>
@@ -266,5 +266,7 @@
 
     <!-- Active JS -->
     <script src="~/FrontEnd/js/active.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

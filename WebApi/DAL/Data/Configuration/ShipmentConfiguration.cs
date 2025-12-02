@@ -22,27 +22,32 @@ namespace DAL.Data.Configuration
 
             entity.HasOne(d => d.PaymentMethod).WithMany(p => p.TbShipments)
                 .HasForeignKey(d => d.PaymentMethodId)
-                .HasConstraintName("FK_TbShippments_TbPaymentMethods");
+                .HasConstraintName("FK_TbShipments_TbPaymentMethods");
 
             entity.HasOne(d => d.Receiver).WithMany(p => p.TbShipments)
                 .HasForeignKey(d => d.ReceiverId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_TbShippments_TbUserReceivers");
+                .HasConstraintName("FK_TbShipments_TbUserReceivers");
 
             entity.HasOne(d => d.Sender).WithMany(p => p.TbShipments)
                 .HasForeignKey(d => d.SenderId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_TbShippments_TbUserSebders");
+                .HasConstraintName("FK_TbShipments_TbUserSenders");
 
             entity.HasOne(d => d.ShipingType).WithMany(p => p.TbShipments)
                 .HasForeignKey(d => d.ShipingTypeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_TbShippments_TbShippingTypes");
+                .HasConstraintName("FK_TbShipments_TbShipingTypes");
 
             entity.HasOne(d => d.ShipingPackging).WithMany(p => p.TbShipments)
                 .HasForeignKey(d => d.ShipingPackgingId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_TbShippments_TbShipingPackginges");
+                .HasConstraintName("FK_TbShipments_TbShipingPackginges");
+
+            entity.HasOne(d => d.Carrier).WithMany(p => p.TbShipments)
+              .HasForeignKey(d => d.CarrierId)
+              .OnDelete(DeleteBehavior.ClientSetNull)
+              .HasConstraintName("FK_TbShipments_TbCarriers");
         }
     }
 }

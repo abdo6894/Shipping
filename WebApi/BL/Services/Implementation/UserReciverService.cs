@@ -9,7 +9,12 @@ using Domains;
 // UserReciverService.cs
 public class UserReciverService : GenericService<UserReciver, UserReciverDto>, IUserReciverService
 {
-    public UserReciverService(IGenericRepository<UserReciver> repository, IMappingService mapper, IUserService userService)
-        : base(repository, mapper, userService) { }
+    IUnitOfWork _uow;
+
+    public UserReciverService(IGenericRepository<UserReciver> repo, IMappingService mapper, IUserService userService, IUnitOfWork uow)
+        : base(repo, mapper, userService)
+    {
+        _uow = uow;
+    }
 }
 

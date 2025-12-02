@@ -1,0 +1,12 @@
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\bin\Debug\net9.0\Shared_Liberary.deps.json
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\bin\Debug\net9.0\Shared_Liberary.dll
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\bin\Debug\net9.0\Shared_Liberary.pdb
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\obj\Debug\net9.0\Shared_Liberary.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\obj\Debug\net9.0\Shared_Liberary.AssemblyInfoInputs.cache
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\obj\Debug\net9.0\Shared_Liberary.AssemblyInfo.cs
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\obj\Debug\net9.0\Shared_Liberary.csproj.CoreCompileInputs.cache
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\obj\Debug\net9.0\Shared_Liberary.sourcelink.json
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\obj\Debug\net9.0\Shared_Liberary.dll
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\obj\Debug\net9.0\refint\Shared_Liberary.dll
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\obj\Debug\net9.0\Shared_Liberary.pdb
+D:\MyProjects\FullProject\Shipping\WebApi\Shared_Liberary\obj\Debug\net9.0\ref\Shared_Liberary.dll

@@ -16,14 +16,21 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
              "https://localhost:44391",
-            "https://localhost:7279"  // MVC via direct run   // MVC via IIS Express
+            "https://localhost:7279" ,
+            "http://127.0.0.1:5500" // MVC via direct run   // MVC via IIS Express
         ) // 👈 Your MVC project URL
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials(); // 👈 Required for cookies (refresh token)
     });
 
-}); builder.Services.AddControllers();
+});
+
+builder.Services.AddControllers()
+     .AddJsonOptions(options =>
+     {
+         options.JsonSerializerOptions.PropertyNamingPolicy = null; // ⬅️ مهم جدًا
+     });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

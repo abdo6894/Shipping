@@ -12,7 +12,7 @@ namespace DAL.Data.Configuration
     public class UserReceiverConfiguration : IEntityTypeConfiguration<UserReciver>
     {
         public void Configure(EntityTypeBuilder<UserReciver> entity)
-        {
+        { 
             entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.Address).HasMaxLength(500);
             entity.Property(e => e.CreatedDate).HasColumnType("datetime");

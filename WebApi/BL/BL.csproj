@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AppResources\AppResources.csproj" />
     <ProjectReference Include="..\DAL\DAL.csproj" />
+    <ProjectReference Include="..\Shared_Liberary\Shared_Liberary.csproj" />
   </ItemGroup>
 
   <ItemGroup>

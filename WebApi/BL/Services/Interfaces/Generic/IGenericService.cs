@@ -11,10 +11,10 @@ namespace BL.Services.Interfaces.Generic
         where T : BaseEntity
        where TDto : class
     {
-        TDto GetById(Guid id);
-        List<TDto> GetAll();
-        bool Add(TDto entity);
-        bool Update(TDto entity);
-        bool ChangeStatus( Guid UserId,int Status=1);
+        Task<TDto> GetById(Guid id);
+        Task<List<TDto>> GetAll();
+        Task<(bool,Guid)> Add(TDto entity);
+        Task<bool> Update(TDto entity);
+        Task<bool> ChangeStatus( Guid UserId,int Status=1);
     }
 }

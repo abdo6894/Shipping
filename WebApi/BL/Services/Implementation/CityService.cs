@@ -6,6 +6,7 @@ using BL.Services.Interfaces;
 using BL.Services.Interfaces.Generic;
 using DAL.Repositories.Interfaces;
 using Domains;
+using System.Threading.Tasks;
 // CityService.cs
 public class CityService : GenericService<City, CityDto>, ICityService
 {
@@ -18,15 +19,15 @@ public class CityService : GenericService<City, CityDto>, ICityService
         _mapper = mapper;
     }
 
-    public List<CityDto> GetAllCities()
+    public async Task<List<CityDto>> GetAllCities()
     {
-       var cities=  _genericVwRepository.GetList(x=>x.CurrentState>0).ToList();
-        return _mapper.MapList<VwCitiy, CityDto>(cities); 
+       var cities= await _genericVwRepository.GetList(x=>x.CurrentState>0);
+        return  _mapper.MapList<VwCitiy, CityDto>(cities); 
     }
 
-    public List<CityDto> GetByCountry(Guid countryId)
+    public async Task<List<CityDto>> GetByCountry(Guid countryId)
     {
-        var cities = _genericVwRepository.GetList(x => x.CurrentState > 0 && x.CountryId==countryId).ToList();
+        var cities = await _genericVwRepository.GetList(x => x.CurrentState > 0 && x.CountryId==countryId);
         return _mapper.MapList<VwCitiy, CityDto>(cities);
     }
 }

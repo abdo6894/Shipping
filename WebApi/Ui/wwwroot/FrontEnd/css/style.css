@@ -4385,3 +4385,41 @@ form input[type="file"] {
     text-decoration: none;
     cursor: pointer;
  }
+/* Pagination Style */
+.pagination-container {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.pagination-buttons {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.page-btn {
+	border: 1px solid #dc3545;
+	background-color: white;
+	color: #dc3545;
+	padding: 6px 14px;
+	border-radius: 6px;
+	font-weight: 500;
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+	.page-btn:hover:not(.disabled):not(.active) {
+		background-color: #dc3545;
+		color: white;
+	}
+
+	.page-btn.active {
+		background-color: #dc3545;
+		color: white;
+	}
+
+	.page-btn.disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}

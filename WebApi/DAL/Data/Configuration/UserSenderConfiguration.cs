@@ -24,7 +24,7 @@ namespace DAL.Data.Configuration
             entity.HasOne(d => d.City).WithMany(p => p.TbUserSenders)
                 .HasForeignKey(d => d.CityId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_TbUserSebders_TbCities");
+                .HasConstraintName("FK_TbUserSenders_TbCities");
         }
     }
 }
