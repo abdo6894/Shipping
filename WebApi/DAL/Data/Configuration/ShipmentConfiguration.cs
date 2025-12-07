@@ -20,10 +20,6 @@ namespace DAL.Data.Configuration
             entity.Property(e => e.ShipingRate).HasColumnType("decimal(8, 4)");
             entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
 
-            entity.HasOne(d => d.PaymentMethod).WithMany(p => p.TbShipments)
-                .HasForeignKey(d => d.PaymentMethodId)
-                .HasConstraintName("FK_TbShipments_TbPaymentMethods");
-
             entity.HasOne(d => d.Receiver).WithMany(p => p.TbShipments)
                 .HasForeignKey(d => d.ReceiverId)
                 .OnDelete(DeleteBehavior.ClientSetNull)

@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DD15FE12-D25E-452B-B8EB-65DDD7621BD7}|WebApi\\WebApi.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\webapi\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD15FE12-D25E-452B-B8EB-65DDD7621BD7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,21 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ShipmentsController.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\WebApi\\Controllers\\ShipmentsController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\ShipmentsController.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\WebApi\\Controllers\\ShipmentsController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\ShipmentsController.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAcwK8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:27:26.045Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"

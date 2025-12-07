@@ -1,14 +1,10 @@
-using BL.Mapping;
-using DAL.Data.DbContext;
-using DAL.Repositories.Implementations;
-using DAL.Repositories.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using BL.Services.Interfaces.Generic;
-using Ui.Services;
-using Microsoft.OpenApi.Writers;
+ï»¿using DAL.Data.DbContext;
 using Domains;
+using MaxMind.GeoIP2;
 using Microsoft.AspNetCore.Identity;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Stripe;
+using Ui.Services;
 namespace Ui
 {
     public class Program
@@ -17,11 +13,11 @@ namespace Ui
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
             builder.Services.AddControllersWithViews();
 
-            RegisterationServiceHelper.RegisterationService(builder);   
-
+            RegisterationServiceHelper.RegisterationService(builder); ;
 
             var app = builder.Build();
 
@@ -40,10 +36,10 @@ namespace Ui
 
             app.UseRouting();
 
-            app.UseAuthentication(); // ãåã ÌÏðÇ áæ ÚäÏß Identity
+            app.UseAuthentication(); // Ù…Ù‡Ù… Ø¬Ø¯Ù‹Ø§ Ù„Ùˆ Ø¹Ù†Ø¯Ùƒ Identity
             app.UseAuthorization();
 
-            // ÃæáðÇ: ÎÑíØÉ ÇáÜ Areas
+            // Ø£ÙˆÙ„Ù‹Ø§: Ø®Ø±ÙŠØ·Ø© Ø§Ù„Ù€ Areas
             app.MapControllerRoute(
                   name: "admin",
                   pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");

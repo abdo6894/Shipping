@@ -11,7 +11,7 @@ using Ui.Controllers;
 namespace Ui.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Reviwer,Operation,OperationManger")]
     public class ShipmentsController : Controller
     {
         private readonly IShipmentQuery _shipmentQuery;
@@ -22,6 +22,7 @@ namespace Ui.Areas.Admin.Controllers
             _logger = logger;
             _shipmentQuery = shipmentService;
         }
+
         public async Task<IActionResult> List(int Page = 1)
         {
             ShipmentstatuesEnum? status = ShipmentstatuesEnum.Created;

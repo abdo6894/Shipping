@@ -19,12 +19,14 @@ public partial class ShipingContext : IdentityDbContext<ApplicationUser>
     public virtual DbSet<RefreshToken> TbRefreshTokens { get; set; }
     public virtual DbSet<Carrier> TbCarriers { get; set; }
 
+    public virtual DbSet<PaymentTransaction> PaymentTransactions { get; set; }
+    
+
     public virtual DbSet<City> TbCities { get; set; }
     public virtual DbSet<VwCitiy> VwCities { get; set; }
 
     public virtual DbSet<Country> TbCountries { get; set; }
 
-    public virtual DbSet<PaymentMethod> TbPaymentMethods { get; set; }
 
     public virtual DbSet<Setting> TbSettings { get; set; }
 

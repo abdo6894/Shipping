@@ -8,7 +8,8 @@ using Ui.Helpers;
 namespace Ui.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
+
     public class CitiesController : Controller
     {
         private readonly ICityService _CityService;

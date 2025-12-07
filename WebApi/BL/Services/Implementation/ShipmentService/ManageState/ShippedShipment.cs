@@ -7,35 +7,46 @@ namespace BL.Services.Implementation.ShipmentService.ManageState
 {
     public class ShippedShipment : IShipmentStateHandler
     {
-        IShipmentCommand _Shipment;
-        IShipmentStatusService _status;
+        private readonly IShipmentCommand _shipmentCommand;
+        private readonly IShipmentQuery _shipmentQuery;
+        private readonly IShipmentStatusService _status;
         private readonly IUserService _userService;
 
-        public ShippedShipment(IShipmentCommand Shipment, IShipmentStatusService status, IUserService userService)
+        public ShippedShipment(
+            IShipmentCommand shipmentCommand,
+            IShipmentQuery shipmentQuery,
+            IShipmentStatusService status,
+            IUserService userService)
         {
-            _Shipment = Shipment;
+            _shipmentCommand = shipmentCommand;
+            _shipmentQuery = shipmentQuery;
             _status = status;
             _userService = userService;
         }
-        public ShipmentstatuesEnum TargetState { get => ShipmentstatuesEnum.Shipped; }
+
+        public ShipmentstatuesEnum TargetState => ShipmentstatuesEnum.Shipped;
 
         public async Task HandleState(ShipmentDto shipment)
         {
+
+            var current = await _shipmentQuery.GetShipment(shipment.Id);
+
+            if (!current.IsPaid)
+            {
+                throw new InvalidOperationException("لا يمكن شحن الطلب قبل إتمام الدفع.");
+            }
+
             var userId = _userService.GetLoggedInUser();
-            await _Shipment.EditFields(shipment.Id, a =>
+            await _shipmentCommand.EditFields(shipment.Id, a =>
             {
                 a.DelivryDate = shipment.DelivryDate;
                 a.CurrentState = (int)TargetState;
                 a.UpdatedBy = userId;
                 a.UpdatedDate = DateTime.UtcNow;
             });
-            await _Shipment.ChangeStatus(shipment.Id, (int)TargetState);
+
+            await _shipmentCommand.ChangeStatus(shipment.Id, (int)TargetState);
             await _status.Add(shipment.Id, TargetState);
-
-
         }
     }
-
-
-
 }

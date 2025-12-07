@@ -16,6 +16,10 @@ public partial class Shipment : BaseEntity
     public Guid ShipingPackgingId { get; set; }
     public double Width { get; set; }
 
+    public bool IsPaid { get; set; }          
+    public string? PaymentGateway { get; set; }   
+    public string? PaymentReference { get; set; } 
+
     public double Height { get; set; }
 
     public double Weight { get; set; }
@@ -26,14 +30,13 @@ public partial class Shipment : BaseEntity
 
     public decimal ShipingRate { get; set; }
 
-    public Guid? PaymentMethodId { get; set; }
 
     public Guid? UserSubscriptionId { get; set; }
 
     public double? TrackingNumber { get; set; }
     public Guid? CarrierId { get; set; }
     public Guid? ReferenceId { get; set; }
-    public virtual PaymentMethod? PaymentMethod { get; set; }
+
     public virtual Carrier Carrier { get; set; } = null!;
     public virtual UserReciver Receiver { get; set; } = null!;
 

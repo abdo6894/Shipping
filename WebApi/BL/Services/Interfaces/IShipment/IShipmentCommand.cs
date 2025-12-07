@@ -11,9 +11,9 @@ namespace BL.Services.Interfaces.IShipment
 {
     public interface IShipmentCommand : IGenericService<Shipment,ShipmentDto>
     {
-        Task<bool> Create(ShipmentDto dto);
+        Task<Guid> Create(ShipmentDto dto);
         Task<bool> Edit(ShipmentDto dto);
-        public Task EditFields(Guid id, Action<Shipment> updateAction);
+        Task EditFields(Guid id, Action<Shipment> updateAction);
 
     }
 }

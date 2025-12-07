@@ -30,9 +30,10 @@
         const headers = useAuth && accessToken
             ? { 'Authorization': 'Bearer ' + accessToken }
             : {};
-        console.log("Base URL:", this.baseUrl);
-        console.log("Full URL:", this.baseUrl + url);
 
+        console.log("AccessToken from cookie:", accessToken);
+        console.log("Headers sent from ApiClient.post:", headers);
+        console.log("Full URL:", this.baseUrl + url);
 
         $.ajax({
             url: this.baseUrl + url,
@@ -55,6 +56,7 @@
             }
         });
     },
+
 
     refreshToken: function (onSuccess, onFailure) {
         $.ajax({

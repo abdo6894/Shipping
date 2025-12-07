@@ -8,7 +8,7 @@ using Ui.Helpers;
 namespace Ui.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class CarriersController : Controller
     {
        private readonly ICarrierService _CarrierService;

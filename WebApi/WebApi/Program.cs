@@ -4,12 +4,16 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Stripe;
 using System.Text;
 using WebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>

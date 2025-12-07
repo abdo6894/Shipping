@@ -42,7 +42,8 @@ public class ShipmentCommandService : GenericService<Shipment, ShipmentDto>, ISh
         _userService = userService;
         _shipmentStatus = shipmentStatus;
     }
-    public async Task<bool> Create(ShipmentDto dto)
+    // بدلاً من Task<bool>
+    public async Task<Guid> Create(ShipmentDto dto)
     {
         try
         {
@@ -52,6 +53,7 @@ public class ShipmentCommandService : GenericService<Shipment, ShipmentDto>, ISh
             dto.ShipingRate = _rateCalculator.CalculateRate(dto);
 
             var userId = _userService.GetLoggedInUser();
+
             // Sender
             if (dto.SenderId == Guid.Empty)
             {
@@ -68,11 +70,53 @@ public class ShipmentCommandService : GenericService<Shipment, ShipmentDto>, ISh
                 dto.ReceiverId = reciverResulet.Item2;
             }
 
+            dto.IsPaid = false;
+            dto.PaymentGateway = null;
+            dto.PaymentReference = null;
 
             dto.CurrentState = (int)ShipmentstatuesEnum.Created;
-            Guid gId = Guid.Empty;
-            var resulet = await Add(dto);
-            await _shipmentStatus.Add(gId, ShipmentstatuesEnum.Created);
+
+            // Add الشحنة وترجع (success, id)
+            var addResult = await Add(dto);        // addResult : (bool, Guid)
+            var success = addResult.Item1;
+            var shipmentId = addResult.Item2;
+
+            if (!success || shipmentId == Guid.Empty)
+            {
+                await _uow.RollbackAsync();
+                return Guid.Empty;
+            }
+
+            await _shipmentStatus.Add(shipmentId, ShipmentstatuesEnum.Created);
+
+            await _uow.CommitAsync();
+            return shipmentId;
+        }
+        catch
+        {
+            await _uow.RollbackAsync();
+            return Guid.Empty;
+        }
+    }
+
+    public async Task<bool> Edit(ShipmentDto dto)
+    {
+        try
+        {
+            await _uow.BeginTransactionAsync();
+
+            dto.ShipingRate = _rateCalculator.CalculateRate(dto);
+
+            // نربط الـ DTO بالـ Ids الموجودة
+            dto.SenderData.Id = dto.SenderId;
+            dto.ReciverData.Id = dto.ReceiverId;
+
+            // تحديث المرسل والمستقبل عن طريق DTO + Repository
+            var senderResult = await _userSender.Update(dto.SenderData);
+            var reciverResult = await _userReceiver.Update(dto.ReciverData);
+
+            // تحديث الشحنة
+            await this.Update(dto);
 
             await _uow.CommitAsync();
             return true;
@@ -84,36 +128,7 @@ public class ShipmentCommandService : GenericService<Shipment, ShipmentDto>, ISh
         }
     }
 
-    public async Task<bool> Edit(ShipmentDto dto)
-    {
-        try
-        {
 
-            //create tracking number
-            await _uow.BeginTransactionAsync();
-
-            dto.ShipingRate = _rateCalculator.CalculateRate(dto);
-
-            // save sender
-            dto.SenderData.Id = dto.SenderId;
-            await _userSender.Update(dto.SenderData);
-
-            dto.ReciverData.Id = dto.ReceiverId;
-
-            await _userReceiver.Update(dto.ReciverData);
-            // save shipment
-            await Update(dto!);
-
-            await _uow.CommitAsync();
-            return true;
-
-        }
-        catch (Exception)
-        {
-            await _uow.RollbackAsync();
-            return false;
-        }
-    }
 
     public async Task EditFields(Guid id, Action<Shipment> updateAction)
     {

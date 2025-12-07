@@ -1,48 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\implementation\\shipmentservice\\managestate\\shippedshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\implementation\\shipmentservice\\managestate\\shippedshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\implementation\\shipmentservice\\managestate\\shipmentstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\implementation\\shipmentservice\\managestate\\shipmentstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\implementation\\shipmentservice\\managestate\\shipmentstatuesenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\implementation\\shipmentservice\\managestate\\shipmentstatuesenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\implementation\\shipmentservice\\managestate\\shipmentstatehandlerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\implementation\\shipmentservice\\managestate\\shipmentstatehandlerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\implementation\\shipmentservice\\managestate\\returnedshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\implementation\\shipmentservice\\managestate\\returnedshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\implementation\\shipmentservice\\managestate\\readyshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\implementation\\shipmentservice\\managestate\\readyshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\implementation\\shipmentservice\\managestate\\deliverdshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\implementation\\shipmentservice\\managestate\\deliverdshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\implementation\\shipmentservice\\managestate\\approveshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\implementation\\shipmentservice\\managestate\\approveshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\interfaces\\ishipment\\imanagestatue\\ishipmentstatehandlerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\interfaces\\ishipment\\imanagestatue\\ishipmentstatehandlerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|d:\\myprojects\\fullproject\\shipping\\webapi\\bl\\services\\interfaces\\ishipment\\imanagestatue\\ishipmentstatehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9372134D-1611-7D77-0539-DBBD897F17B7}|BL\\BL.csproj|solutionrelative:bl\\services\\interfaces\\ishipment\\imanagestatue\\ishipmentstatehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -50,73 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ShippedShipment.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShippedShipment.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShippedShipment.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShippedShipment.cs",
-              "RelativeToolTip": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShippedShipment.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAcwB4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:26:02.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ShipmentStatusService.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentStatusService.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentStatusService.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentStatusService.cs",
-              "RelativeToolTip": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentStatusService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:25:57.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ShipmentstatuesEnum.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentstatuesEnum.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentstatuesEnum.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentstatuesEnum.cs",
-              "RelativeToolTip": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentstatuesEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:25:49.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ShipmentStateHandlerFactory.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentStateHandlerFactory.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentStateHandlerFactory.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentStateHandlerFactory.cs",
-              "RelativeToolTip": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ShipmentStateHandlerFactory.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:25:43.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReturnedShipment.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ReturnedShipment.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ReturnedShipment.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ReturnedShipment.cs",
-              "RelativeToolTip": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ReturnedShipment.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:25:25.06Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -132,71 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReadyShipment.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ReadyShipment.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ReadyShipment.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ReadyShipment.cs",
-              "RelativeToolTip": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ReadyShipment.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAcwCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:25:32.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DeliverdShipment.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\DeliverdShipment.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\DeliverdShipment.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\DeliverdShipment.cs",
-              "RelativeToolTip": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\DeliverdShipment.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:25:24.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApproveShipment.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ApproveShipment.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ApproveShipment.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Implementation\\ShipmentService\\ManageState\\ApproveShipment.cs",
-              "RelativeToolTip": "BL\\Services\\Implementation\\ShipmentService\\ManageState\\ApproveShipment.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAIwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:25:12.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IShipmentStateHandlerFactory.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Interfaces\\IShipment\\IManageStatue\\IShipmentStateHandlerFactory.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Interfaces\\IShipment\\IManageStatue\\IShipmentStateHandlerFactory.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Interfaces\\IShipment\\IManageStatue\\IShipmentStateHandlerFactory.cs",
-              "RelativeToolTip": "BL\\Services\\Interfaces\\IShipment\\IManageStatue\\IShipmentStateHandlerFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:24:44.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IShipmentStateHandler.cs",
-              "DocumentMoniker": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Interfaces\\IShipment\\IManageStatue\\IShipmentStateHandler.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\Interfaces\\IShipment\\IManageStatue\\IShipmentStateHandler.cs",
-              "ToolTip": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\Services\\Interfaces\\IShipment\\IManageStatue\\IShipmentStateHandler.cs",
-              "RelativeToolTip": "BL\\Services\\Interfaces\\IShipment\\IManageStatue\\IShipmentStateHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T04:24:36.307Z",
-              "EditorCaption": ""
             }
           ]
         },

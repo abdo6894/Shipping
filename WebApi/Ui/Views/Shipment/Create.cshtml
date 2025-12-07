@@ -463,13 +463,26 @@
                         <input type="button" name="previous" class="previous action-button" value="Previous" />
                         <input type="button" name="next" class="next action-button" value="Continue" />
                     </fieldset>
-                    <!-- fieldsets payment Start-->
+                    <!-- fieldsets Complete Start-->
                     <fieldset>
                         <div class="shipping-form">
                             <h1 class="tanks-message">Thank You For Create Shipping</h1>
                         </div>
-                        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                        <input type="submit"
+                               name="submit"
+                               id="btnSubmitShipment"
+                               class="submit action-button"
+                               value="Submit" />
+
+                        <input type="button"
+                               id="btnCreateAndPay"
+                               class="action-button"
+                               value="Create & Pay Now" />
+
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
                     </fieldset>
+
+
                 </form>
             </div>
         </div>
@@ -486,8 +499,43 @@
     <script src="~/modules/countriesservice.js"></script>
     <script src="~/modules/shippingtypesservice.js"></script>
     <script src="~/modules/shippingpackgingservice.js"></script>
+    <script src="~/modules/carriersservice.js"></script>
     <script src="~/modules/shipment/dropdownhelper.js"></script>
     <script src="~/modules/shipment/pageevent.js"></script>
     <script src="~/modules/shipment/shipmentsservice.js"></script>
     <script src="~/modules/shipment/create.js"></script>
+    <script>
+        console.log("Create.cshtml scripts loaded");
+
+        $(document).on("click", "#btnCreateAndPay", function (e) {
+            e.preventDefault();
+            console.log("Create & Pay clicked (delegated)");
+
+            const dto = ShipmentService.GetModel();
+            console.log("Create & Pay DTO:", dto);
+
+            ApiClient.post("/api/Shipments/Create", dto,
+                function (response) {
+                    console.log("Create shipment response:", response);
+
+                    const shipmentId = response?.Data || response?.data || null;
+                    console.log("shipmentId used for payment:", shipmentId);
+
+                    if (!shipmentId) {
+                        alert("تم إنشاء الشحنة لكن تعذر الحصول على رقمها للدفع.");
+                        return;
+                    }
+
+                    window.location.href = `/Home/Payment?shipmentId=${shipmentId}`;
+                },
+                function (xhr) {
+                    console.error("API Error in Create & Pay:", xhr);
+                    alert("فشل إنشاء الشحنة، جرّب تاني.");
+                });
+        });
+    </script>
+}
+
+
+
 }

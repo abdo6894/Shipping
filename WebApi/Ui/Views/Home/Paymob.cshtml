@@ -1,0 +1,76 @@
+﻿<h2>الدفع عبر Paymob</h2>
+<div class="paymob-container">
+    <button id="paymob-button" class="paymob-button">
+        <span class="paymob-logo">Paymob</span>
+        <span class="paymob-text">إتمام الدفع الآمن</span>
+    </button>
+
+    <div id="paymob-result-message" class="paymob-message"></div>
+</div>
+
+@section scripts {
+    <script src="~/modules/apphelper.js"></script>
+    <script src="~/modules/apiclient.js"></script>
+    <script src="~/modules/payment/paymob.js"></script>
+
+
+    <style>
+        .paymob-container {
+            max-width: 400px;
+            margin: 40px auto;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .paymob-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #00a19a, #007f78);
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+        }
+
+            .paymob-button:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+                background: linear-gradient(135deg, #06b5ad, #009288);
+            }
+
+            .paymob-button:active {
+                transform: translateY(0);
+                box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            }
+
+        .paymob-logo {
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: #fff;
+            color: #00a19a;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .paymob-text {
+            font-size: 14px;
+        }
+
+        .paymob-message {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #d93025;
+            min-height: 18px;
+        }
+    </style>
+}
+
+
+

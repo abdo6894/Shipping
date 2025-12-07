@@ -1,0 +1,120 @@
+﻿<h2 style="text-align:center; margin-top:20px;">طرق الدفع المتاحة</h2>
+
+<!-- 🔵 الهيدر بتاع الصفحة -->
+<div class="payment-header">
+    <h1>اختر طريقة الدفع المناسبة لك</h1>
+    <p>ادفع أونلاين بأمان وسرعة — عبر PayPal أو Stripe</p>
+
+    <div class="secure-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" class="secure-icon" />
+        <span>الدفع آمن ومشفّر 100%</span>
+    </div>
+</div>
+
+<div class="payments-container">
+
+    <!-- PayPal -->
+    <div class="payment-method card-box">
+        <h3>PayPal</h3>
+        <div id="paypal-button-container"></div>
+        <p id="paypal-result-message"></p>
+    </div>
+
+    <!-- Stripe -->
+    <button id="checkout-button" class="stripe-button-custom">
+        <img src="https://cdn.worldvectorlogo.com/logos/stripe-4.svg" class="stripe-logo" />
+        <span class="stripe-text">إتمام الدفع الآمن</span>
+    </button>
+
+
+</div>
+
+@section scripts {
+    <script src="~/modules/apphelper.js"></script>
+    <script src="~/modules/apiclient.js"></script>
+
+    <!-- PayPal -->
+    <script src="https://www.paypal.com/sdk/js?client-id=ATq55Afe8EPEMgAk2Gbgwvr3kzNV2tHeyAHc0TnHyp7kpdmMODY9IQUtGHrdTfvycniy9n42Xq--Ar0_&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo,paylater,card"
+            data-sdk-integration-source="developer-studio"></script>
+    <script src="~/modules/payment/paypal.js"></script>
+
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="~/modules/payment/stripe.js"></script>
+
+    <style>
+
+        /* 🔵 تنسيق الهيدر */
+        .payment-header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2B4C7E; /* أزرق شيك */
+        }
+
+        .payment-header p {
+            font-size: 20px;
+            color: #555; /* رمادي ناعم أفضل من الأسود */
+        }
+
+
+        /* 🔒 صندوق الأمان */
+        /* 🔒 صندوق الأمان */
+        .secure-box {
+            margin-top: 20px;
+            background: #e9f5ff;
+            padding: 12px 18px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            color: #1a4d7c;
+            font-weight: 600;
+            border: 1px solid #c8e6ff;
+        }
+
+        .secure-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        /* زرار Stripe */
+        .stripe-button-custom {
+            background-color: #635BFF; /* اللون الرسمي */
+            color: white;
+            border: none;
+            padding: 14px 22px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            transition: 0.2s ease;
+            margin-top: 20px;
+        }
+
+            .stripe-button-custom:hover {
+                background-color: #4B44E3;
+            }
+
+        /* لوجو Stripe */
+        .stripe-logo {
+            width: 110px; /* أكبر شوية */
+            height: auto;
+            filter: brightness(0) invert(1); /* يخلي اللوجو أبيض */
+        }
+
+        /* النص */
+        .stripe-text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+
+    </style>
+
+}

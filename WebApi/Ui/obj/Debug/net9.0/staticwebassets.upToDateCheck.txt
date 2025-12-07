@@ -431,6 +431,7 @@ D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\js\settings.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\flag-icon-css\flags\1x1\mh.svg
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\ace-builds\src-min\theme-clouds_midnight.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\progressbar.js\progressbar.min.js
+D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Modules\Payment\Paypal.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\tinymce\skins\ui\oxide-dark\content.inline.min.css
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\ace-builds\src-min\mode-elixir.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\jsgrid\jsgrid.min.css
@@ -915,6 +916,7 @@ D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\tinymce\plugi
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\FrontEnd\js\bootstrap.min.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\ace-builds\src-min\mode-haml.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\ace-builds\src-min\theme-mono_industrial.js
+D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Modules\Payment\Stripe.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\flag-icon-css\flags\4x3\eh.svg
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\ace-builds\src-min\snippets\kotlin.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\lightgallery\js\lightgallery.js
@@ -1044,6 +1046,7 @@ D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\lib\bootstrap\dist\css\boot
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\flag-icon-css\flags\1x1\gl.svg
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\ace-builds\src-min\snippets\sh.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\ace-builds\src-min\snippets\nim.js
+D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Modules\Payment\paymob.js
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\tinymce\skins\ui\oxide\skin.min.css
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\summernote\dist\summernote.min.js.map
 D:\MyProjects\FullProject\Shipping\WebApi\Ui\wwwroot\Admin\vendors\flag-icon-css\flags\1x1\is.svg
@@ -3782,6 +3785,9 @@ wwwroot\Modules\AppHelper.js
 wwwroot\Modules\CarriersService.js
 wwwroot\Modules\CititesService.js
 wwwroot\Modules\CountriesService.js
+wwwroot\Modules\Payment\Paypal.js
+wwwroot\Modules\Payment\Stripe.js
+wwwroot\Modules\Payment\paymob.js
 wwwroot\Modules\Shipment\Create.js
 wwwroot\Modules\Shipment\DropdownHelper.js
 wwwroot\Modules\Shipment\Edit.js

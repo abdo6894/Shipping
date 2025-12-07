@@ -5,10 +5,14 @@ using BL.Mapping;
 using BL.Services;
 using BL.Services.Implementation;
 using BL.Services.Implementation.Generic;
+using BL.Services.Implementation.MaxMind_Ip;
+using BL.Services.Implementation.Payments;
 using BL.Services.Implementation.ShipmentService;
 using BL.Services.Implementation.ShipmentService.ManageState;
 using BL.Services.Interfaces;
 using BL.Services.Interfaces.Generic;
+using BL.Services.Interfaces.IMaxMind_Ip;
+using BL.Services.Interfaces.IPayments;
 using BL.Services.Interfaces.IShipment;
 using BL.Services.Interfaces.IShipment.IManageStatue;
 using DAL.Data.DbContext;
@@ -16,6 +20,7 @@ using DAL.Repositories.Implementations;
 using DAL.Repositories.Interfaces;
 using Domains;
 using FluentValidation;
+using MaxMind.GeoIP2;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
@@ -23,17 +28,36 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Serilog;
+using Shared_Liberary.Common;
 using System.Net.Http.Headers;
 using System.Reflection;
+
 
 
 namespace Ui.Services
 {
     public static class RegisterationServiceHelper
     {
+
         public static void RegisterationService(WebApplicationBuilder builder)
         {
+
+            builder.Services.AddSingleton<DatabaseReader>(sp =>
+            {
+                var geoDbPath = Path.Combine(
+                    builder.Environment.ContentRootPath,
+                    "GeoIP",
+                    "GeoLite2-Country.mmdb");
+
+                Console.WriteLine("GeoIP DB path => " + geoDbPath); 
+
+                return new DatabaseReader(geoDbPath);
+            });
+
+
+
             builder.Services.AddHttpClient("ApiClient", client =>
             {
                 // Base URL will be configured in GenericApiClient constructor using appsettings.json
@@ -76,6 +100,9 @@ namespace Ui.Services
                              .WriteTo.Console();
             });
 
+
+
+
             builder.Services.AddScoped<IMappingService, MappingService>();
             builder.Services.AddScoped<GenericApiClient>();
 
@@ -89,7 +116,6 @@ namespace Ui.Services
 
             builder.Services.AddScoped<ICityService, CityService>();
             builder.Services.AddScoped<ICountryService, CountryService>();
-            builder.Services.AddScoped<IPaymentMethodService, PaymentMethodService>();
             builder.Services.AddScoped<ISettingService, SettingService>();
             builder.Services.AddScoped<IShipingTypeService, ShipingTypeService>();
             builder.Services.AddScoped<IShipingPackgingTypes, ShipingPackgingService>();
@@ -109,6 +135,17 @@ namespace Ui.Services
             builder.Services.AddScoped<ShippedShipment>();
             builder.Services.AddScoped<DeliverdShipment>();
             builder.Services.AddScoped<ReturnedShipment>();
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddHttpClient();
+
+
+            builder.Services.AddScoped<PayPalGateway>();
+            builder.Services.AddScoped<PaymobGateway>();
+            builder.Services.AddScoped<IPaymentGatewayFactory, PaymentGatewayFactory>();
+            builder.Services.AddScoped<StripeGateway>();
+
+            builder.Services.AddScoped<IUserCountryProvider, MaxMindCountryProvider>();
+
 
             builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
             builder.Services.AddBLServices();

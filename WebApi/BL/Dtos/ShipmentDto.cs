@@ -17,9 +17,11 @@ namespace BL.Dtos
         public Guid ReceiverId { get; set; }
         public UserSenderDto SenderData { get; set; }
         public UserReciverDto ReciverData { get; set; }
-        public Guid ShipingTypeId { get; set; }
-        public Guid ShipingPackgingId { get; set; }
-
+        public Guid? ShipingTypeId { get; set; }
+        public Guid? ShipingPackgingId { get; set; }
+        public bool IsPaid { get; set; }
+        public string? PaymentGateway { get; set; }
+        public string? PaymentReference { get; set; }
         public double Width { get; set; }
 
         public double Height { get; set; }
@@ -31,8 +33,6 @@ namespace BL.Dtos
         public decimal PackageValue { get; set; }
 
         public decimal ShipingRate { get; set; }
-
-        public Guid? PaymentMethodId { get; set; }
 
         public Guid? UserSubscriptionId { get; set; }
 

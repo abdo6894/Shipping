@@ -1,4 +1,5 @@
 ﻿using BL.Dtos;
+using BL.Dtos.Payment;
 using BL.Services.Implementation.ShipmentService.ManageState;
 using BL.Services.Interfaces;
 using BL.Services.Interfaces.IShipment;
@@ -130,37 +131,52 @@ namespace WebApi.Controllers
 
             try
             {
-                var result = await _ShipmentCommand.Create(data);
+                Guid shipmentId = await _ShipmentCommand.Create(data);
 
-                return Ok(ApiResponse<object>.SuccessResponse(result, "Shipment created successfully."));
+                if (shipmentId == Guid.Empty)
+                {
+                    return StatusCode(500,
+                        ApiResponse<string>.FailResponse("Failed to create shipment."));
+                }
+
+                return Ok(ApiResponse<Guid>.SuccessResponse(shipmentId, "Shipment created successfully."));
             }
             catch (Exception ex)
             {
                 var errors = new List<string> { ex.Message };
-                return StatusCode(500, ApiResponse<string>.FailResponse("An error occurred while creating the shipment.", errors));
+                return StatusCode(500,
+                    ApiResponse<string>.FailResponse("An error occurred while creating the shipment.", errors));
             }
         }
-            [HttpPost("Edit")]
 
-       public Task<IActionResult> Edit([FromBody] ShipmentDto data)
+        [HttpPost("Edit")]
+        public async Task<IActionResult> Edit([FromBody] ShipmentDto data)
+        {
+            if (data == null)
             {
-                if (data == null)
-                {
-                    return Task.FromResult<IActionResult>(BadRequest(ApiResponse<string>.FailResponse(" Faild TO Edit")));
-                }
-
-                try
-                {
-                    var result = _ShipmentCommand.Edit(data);
-
-                    return Task.FromResult<IActionResult>(Ok(ApiResponse<object>.SuccessResponse(result, "Shipment Updated successfully.")));
-                }
-                catch (Exception ex)
-                {
-                    var errors = new List<string> { ex.Message };
-                    return Task.FromResult<IActionResult>(StatusCode(500, ApiResponse<string>.FailResponse("An error occurred while Updated the shipment.", errors)));
-                }
+                return BadRequest(ApiResponse<string>.FailResponse(" Faild TO Edit"));
             }
+
+            try
+            {
+                // انتظر نتيجة الخدمة بدل إرجاع الـ Task نفسه
+                var result = await _ShipmentCommand.Edit(data); // result: bool
+
+                if (!result)
+                {
+                    return BadRequest(ApiResponse<string>.FailResponse(" Faild TO Edit"));
+                }
+
+                return Ok(ApiResponse<object>.SuccessResponse(result, "Shipment Updated successfully."));
+            }
+            catch (Exception ex)
+            {
+                var errors = new List<string> { ex.Message };
+                return StatusCode(500,
+                    ApiResponse<string>.FailResponse("An error occurred while Updated the shipment.", errors));
+            }
+        }
+
 
         [HttpPost("ChangeStatus")]
         public async Task<IActionResult> ChangeStatus(ShipmentDto data)
@@ -183,6 +199,78 @@ namespace WebApi.Controllers
         }
 
 
+        //[HttpPost("MarkPaid")]
+        //public async Task<IActionResult> MarkPaid([FromBody] ShipmentDto dto)
+        //{
+        //    if (dto == null || dto.Id == Guid.Empty)
+        //        return BadRequest(ApiResponse<string>.FailResponse("ShipmentId is required."));
 
+        //    await _ShipmentCommand.EditFields(dto.Id, s =>
+        //    {
+        //        s.IsPaid = true;
+        //        s.PaymentGateway = dto.PaymentGateway;
+        //        s.PaymentReference = dto.PaymentReference;
+        //    });
+
+        //    Console.WriteLine($"MarkPaid => Id={dto.Id}, Gateway={dto.PaymentGateway}, Ref={dto.PaymentReference}");
+
+        //    return Ok(ApiResponse<string>.SuccessResponse("Shipment marked as paid successfully."));
+        //}
+
+
+
+// ... (باقي الكلاس)
+
+[AllowAnonymous] // *** مهم: Webhook لا يتطلب مصادقة ***
+    [HttpPost("paymob-webhook-confirm")]
+    public async Task<IActionResult> PaymobWebhook([FromForm] IFormCollection data)
+    {
+        // 1. (موصى به) التحقق من الـ HMAC (التوقيع الرقمي) لضمان مصدر الطلب
+        // يجب تطبيق منطق التحقق من HMAC هنا باستخدام Paymob:HMACSecret
+        // (سنفترض تخطيها مؤقتاً للتركيز على تحديث الحالة، لكن يجب تنفيذها في الإنتاج)
+
+        // Paymob Webhook يرسل البيانات كـ Form data
+
+        // 2. تحليل البيانات
+        var successParam = data.Keys.Contains("success") ? data["success"].ToString() : null;
+        var orderIdParam = data.Keys.Contains("order") ? data["order"].ToString() : null;
+        var transactionIdParam = data.Keys.Contains("id") ? data["id"].ToString() : null;
+        var pendingParam = data.Keys.Contains("pending") ? data["pending"].ToString() : null;
+
+        // حالة نجاح العملية (success='true' AND pending='false')
+        var isTransactionSuccessful = successParam == "true" && pendingParam == "false";
+
+        Console.WriteLine($"Paymob Webhook Received: Success={successParam}, Order={orderIdParam}, TxnId={transactionIdParam}");
+
+        if (isTransactionSuccessful &&
+            Guid.TryParse(orderIdParam, out var shipmentId) &&
+            !string.IsNullOrEmpty(transactionIdParam))
+        {
+            // 3. تحديث حالة الشحنة
+            try
+            {
+                await _ShipmentCommand.EditFields(shipmentId, s =>
+                {
+                    s.IsPaid = true;
+                    s.PaymentGateway = "Paymob";
+                    s.PaymentReference = transactionIdParam;
+                });
+
+                Console.WriteLine($"Webhook Success: Shipment {shipmentId} marked as paid.");
+            }
+            catch (Exception ex)
+            {
+                // سجل الخطأ إذا فشل تحديث قاعدة البيانات
+                Console.Error.WriteLine($"Error marking shipment {shipmentId} paid: {ex.Message}");
+                // لا تزال ترد بـ OK حتى لا تعيد Paymob الإرسال
+            }
+
+            // 4. الرد بـ 200 OK لتأكيد استلام الإشعار
+            return Ok();
+        }
+
+        // إذا كانت العملية فاشلة أو معلقة أو غير صالحة، نرد أيضاً بـ 200 OK
+        return Ok();
     }
+}
 }

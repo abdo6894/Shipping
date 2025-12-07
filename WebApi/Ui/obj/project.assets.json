@@ -126,6 +126,36 @@
           }
         }
       },
+      "MaxMind.Db/4.3.4": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/MaxMind.Db.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/MaxMind.Db.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MaxMind.GeoIP2/5.4.1": {
+        "type": "package",
+        "dependencies": {
+          "MaxMind.Db": "4.3.4",
+          "Microsoft.Extensions.Options": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/MaxMind.GeoIP2.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/MaxMind.GeoIP2.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Identity/2.3.1": {
         "type": "package",
         "compile": {
@@ -695,6 +725,22 @@
           "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
         }
       },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.DependencyModel/9.0.9": {
         "type": "package",
         "compile": {
@@ -704,6 +750,42 @@
         },
         "runtime": {
           "lib/net9.0/Microsoft.Extensions.DependencyModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Options/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
+          "Microsoft.Extensions.Primitives": "10.0.0"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
             "related": ".xml"
           }
         },
@@ -1067,6 +1149,23 @@
           }
         }
       },
+      "Stripe.net/50.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "System.Configuration.ConfigurationManager": "9.0.0"
+        },
+        "compile": {
+          "lib/net9.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -1275,23 +1374,23 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Configuration.ConfigurationManager/8.0.1": {
+      "System.Configuration.ConfigurationManager/9.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "System.Security.Cryptography.ProtectedData": "9.0.0"
         },
         "compile": {
-          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net9.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net9.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "System.IdentityModel.Tokens.Jwt/6.35.0": {
@@ -1349,20 +1448,20 @@
           }
         }
       },
-      "System.Security.Cryptography.ProtectedData/8.0.0": {
+      "System.Security.Cryptography.ProtectedData/9.0.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
+          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
+          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "AppResources/1.0.0": {
@@ -1385,7 +1484,9 @@
           "DAL": "1.0.0",
           "FluentValidation": "12.0.0",
           "FluentValidation.AspNetCore": "11.3.1",
-          "Shared_Liberary": "1.0.0"
+          "MaxMind.GeoIP2": "5.4.1",
+          "Shared_Liberary": "1.0.0",
+          "Stripe.net": "50.0.0"
         },
         "compile": {
           "bin/placeholder/BL.dll": {}
@@ -1571,6 +1672,52 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "MaxMind.Db/4.3.4": {
+      "sha512": "LtVOvpeHgYn+Ap95c5QuZ5oZd5zDTY7zlSb9L8tNSuCpXg/SAyOyZip1US50idNcEKZSr5Jev18RMnmHZMmvEA==",
+      "type": "package",
+      "path": "maxmind.db/4.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MaxMind-logo.png",
+        "README.md",
+        "lib/net10.0/MaxMind.Db.dll",
+        "lib/net10.0/MaxMind.Db.xml",
+        "lib/net8.0/MaxMind.Db.dll",
+        "lib/net8.0/MaxMind.Db.xml",
+        "lib/net9.0/MaxMind.Db.dll",
+        "lib/net9.0/MaxMind.Db.xml",
+        "lib/netstandard2.0/MaxMind.Db.dll",
+        "lib/netstandard2.0/MaxMind.Db.xml",
+        "lib/netstandard2.1/MaxMind.Db.dll",
+        "lib/netstandard2.1/MaxMind.Db.xml",
+        "maxmind.db.4.3.4.nupkg.sha512",
+        "maxmind.db.nuspec"
+      ]
+    },
+    "MaxMind.GeoIP2/5.4.1": {
+      "sha512": "xjxNSIU0QlmQM083XFgprMlaEMWbxIN2Ft81IScnCch71Npy0gTEfzY6F7yv3/AYRFKV2ykgnUihUxQsGSyOWA==",
+      "type": "package",
+      "path": "maxmind.geoip2/5.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MaxMind-logo.png",
+        "README.md",
+        "lib/net10.0/MaxMind.GeoIP2.dll",
+        "lib/net10.0/MaxMind.GeoIP2.xml",
+        "lib/net8.0/MaxMind.GeoIP2.dll",
+        "lib/net8.0/MaxMind.GeoIP2.xml",
+        "lib/net9.0/MaxMind.GeoIP2.dll",
+        "lib/net9.0/MaxMind.GeoIP2.xml",
+        "lib/netstandard2.0/MaxMind.GeoIP2.dll",
+        "lib/netstandard2.0/MaxMind.GeoIP2.xml",
+        "lib/netstandard2.1/MaxMind.GeoIP2.dll",
+        "lib/netstandard2.1/MaxMind.GeoIP2.xml",
+        "maxmind.geoip2.5.4.1.nupkg.sha512",
+        "maxmind.geoip2.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Identity/2.3.1": {
@@ -3064,6 +3211,37 @@
         "tools/netcoreapp2.1/System.Diagnostics.DiagnosticSource.dll"
       ]
     },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
+      "sha512": "L3AdmZ1WOK4XXT5YFPEwyt0ep6l8lGIPs7F5OOBZc77Zqeo01Of7XXICy47628sdVl0v/owxYJTe86DTgFwKCA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.Extensions.DependencyModel/9.0.9": {
       "sha512": "fNGvKct2De8ghm0Bpfq0iWthtzIWabgOTi+gJhNOPhNJIowXNEUE2eZNW/zNCzrHVA3PXg2yZ+3cWZndC2IqYA==",
       "type": "package",
@@ -3089,6 +3267,81 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
         "microsoft.extensions.dependencymodel.9.0.9.nupkg.sha512",
         "microsoft.extensions.dependencymodel.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Options/10.0.0": {
+      "sha512": "8oCAgXOow5XDrY9HaXX1QmH3ORsyZO/ANVHBlhLyCeWTH5Sg4UuqZeOTWJi6484M+LqSx0RqQXDJtdYy2BNiLQ==",
+      "type": "package",
+      "path": "microsoft.extensions.options/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Options.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn4.4/cs/cs/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/de/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/es/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/fr/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/it/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ja/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ko/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pl/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pt-BR/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ru/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/tr/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hans/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hant/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "buildTransitive/net461/Microsoft.Extensions.Options.targets",
+        "buildTransitive/net462/Microsoft.Extensions.Options.targets",
+        "buildTransitive/net8.0/Microsoft.Extensions.Options.targets",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Options.targets",
+        "buildTransitive/netstandard2.0/Microsoft.Extensions.Options.targets",
+        "lib/net10.0/Microsoft.Extensions.Options.dll",
+        "lib/net10.0/Microsoft.Extensions.Options.xml",
+        "lib/net462/Microsoft.Extensions.Options.dll",
+        "lib/net462/Microsoft.Extensions.Options.xml",
+        "lib/net8.0/Microsoft.Extensions.Options.dll",
+        "lib/net8.0/Microsoft.Extensions.Options.xml",
+        "lib/net9.0/Microsoft.Extensions.Options.dll",
+        "lib/net9.0/Microsoft.Extensions.Options.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.Options.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
+        "microsoft.extensions.options.10.0.0.nupkg.sha512",
+        "microsoft.extensions.options.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/10.0.0": {
+      "sha512": "inRnbpCS0nwO/RuoZIAqxQUuyjaknOOnCEZB55KSMMjRhl0RQDttSmLSGsUJN3RQ3ocf5NDLFd2mOQViHqMK5w==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Primitives.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Primitives.targets",
+        "lib/net10.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net10.0/Microsoft.Extensions.Primitives.xml",
+        "lib/net462/Microsoft.Extensions.Primitives.dll",
+        "lib/net462/Microsoft.Extensions.Primitives.xml",
+        "lib/net8.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net8.0/Microsoft.Extensions.Primitives.xml",
+        "lib/net9.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net9.0/Microsoft.Extensions.Primitives.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.10.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -3579,6 +3832,34 @@
         "serilog.sinks.mssqlserver.nuspec"
       ]
     },
+    "Stripe.net/50.0.0": {
+      "sha512": "MOKk1mB3HlAxBkhfMRBwCrAN8Jv42eoM/8RATQbt5u1jQceVvtdde/Pn0p+bBtKIiVzOPvPlCdDCxetMsI6B8Q==",
+      "type": "package",
+      "path": "stripe.net/50.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/net462/Stripe.net.dll",
+        "lib/net462/Stripe.net.xml",
+        "lib/net5.0/Stripe.net.dll",
+        "lib/net5.0/Stripe.net.xml",
+        "lib/net6.0/Stripe.net.dll",
+        "lib/net6.0/Stripe.net.xml",
+        "lib/net7.0/Stripe.net.dll",
+        "lib/net7.0/Stripe.net.xml",
+        "lib/net8.0/Stripe.net.dll",
+        "lib/net8.0/Stripe.net.xml",
+        "lib/net9.0/Stripe.net.dll",
+        "lib/net9.0/Stripe.net.xml",
+        "lib/netstandard2.0/Stripe.net.dll",
+        "lib/netstandard2.0/Stripe.net.xml",
+        "stripe.net.50.0.0.nupkg.sha512",
+        "stripe.net.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/9.0.5": {
       "sha512": "qPEsYafg031ixe1NfDEwbTfv9+WE2CAK3YuuIEzv8GTF39HgDgG/mKJqp7Bj6bV1TZT20rx9FeTrATG39WsVBw==",
       "type": "package",
@@ -3845,10 +4126,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Configuration.ConfigurationManager/8.0.1": {
-      "sha512": "gPYFPDyohW2gXNhdQRSjtmeS6FymL2crg4Sral1wtvEJ7DUqFCDWDVbbLobASbzxfic8U1hQEdC7hmg9LHncMw==",
+    "System.Configuration.ConfigurationManager/9.0.0": {
+      "sha512": "PdkuMrwDhXoKFo/JxISIi9E8L+QGn9Iquj2OKDWHB6Y/HnUOuBouF7uS3R4Hw3FoNmwwMo6hWgazQdyHIIs27A==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/8.0.1",
+      "path": "system.configuration.configurationmanager/9.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3858,19 +4139,17 @@
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.Configuration.ConfigurationManager.targets",
         "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
+        "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/System.Configuration.ConfigurationManager.targets",
         "lib/net462/System.Configuration.ConfigurationManager.dll",
         "lib/net462/System.Configuration.ConfigurationManager.xml",
-        "lib/net6.0/System.Configuration.ConfigurationManager.dll",
-        "lib/net6.0/System.Configuration.ConfigurationManager.xml",
-        "lib/net7.0/System.Configuration.ConfigurationManager.dll",
-        "lib/net7.0/System.Configuration.ConfigurationManager.xml",
         "lib/net8.0/System.Configuration.ConfigurationManager.dll",
         "lib/net8.0/System.Configuration.ConfigurationManager.xml",
+        "lib/net9.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net9.0/System.Configuration.ConfigurationManager.xml",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.8.0.1.nupkg.sha512",
+        "system.configuration.configurationmanager.9.0.0.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -3955,10 +4234,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Security.Cryptography.ProtectedData/8.0.0": {
-      "sha512": "+TUFINV2q2ifyXauQXRwy4CiBhqvDEDZeVJU7qfxya4aRYOKzVBpN+4acx25VcPB9ywUN6C0n8drWl110PhZEg==",
+    "System.Security.Cryptography.ProtectedData/9.0.0": {
+      "sha512": "CJW+x/F6fmRQ7N6K8paasTw9PDZp4t7G76UjGNlSDgoHPF0h08vTzLYbLZpOLEJSg35d5wy2jCXGo84EN05DpQ==",
       "type": "package",
-      "path": "system.security.cryptography.protecteddata/8.0.0",
+      "path": "system.security.cryptography.protecteddata/9.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3968,25 +4247,23 @@
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets",
         "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
+        "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/System.Security.Cryptography.ProtectedData.targets",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net462/System.Security.Cryptography.ProtectedData.dll",
         "lib/net462/System.Security.Cryptography.ProtectedData.xml",
-        "lib/net6.0/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net6.0/System.Security.Cryptography.ProtectedData.xml",
-        "lib/net7.0/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net7.0/System.Security.Cryptography.ProtectedData.xml",
         "lib/net8.0/System.Security.Cryptography.ProtectedData.dll",
         "lib/net8.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net9.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net9.0/System.Security.Cryptography.ProtectedData.xml",
         "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
         "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.9.0.0.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -4032,6 +4309,7 @@
       "Serilog >= 4.3.0",
       "Serilog.AspNetCore >= 9.0.0",
       "Serilog.Sinks.MSSqlServer >= 8.2.2",
+      "Stripe.net >= 50.0.0",
       "Swashbuckle.AspNetCore >= 9.0.5"
     ]
   },
@@ -4140,6 +4418,10 @@
           "Serilog.Sinks.MSSqlServer": {
             "target": "Package",
             "version": "[8.2.2, )"
+          },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[50.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

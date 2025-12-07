@@ -216,6 +216,54 @@
     ]
   },
   {
+    "ContainingType": "WebApi.Controllers.PaymentController",
+    "Method": "CaptureOrder",
+    "RelativePath": "api/Payment/capture-order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "BL.Dtos.Payment.PaymentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentController",
+    "Method": "CreateCheckoutSession",
+    "RelativePath": "api/Payment/create-checkout-session",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BL.Dtos.Payment.PaymentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/Payment/create-order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "BL.Dtos.Payment.PaymentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.ShipingPackgingController",
     "Method": "GetAll",
     "RelativePath": "api/ShipingPackging",
@@ -425,6 +473,22 @@
         "Name": "data",
         "Type": "BL.Dtos.ShipmentDto",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "PaymobWebhook",
+    "RelativePath": "api/Shipments/paymob-webhook-confirm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Microsoft.AspNetCore.Http.IFormCollection",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

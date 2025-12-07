@@ -212,44 +212,41 @@ namespace DAL.Migrations
                     b.ToTable("TbCountries");
                 });
 
-            modelBuilder.Entity("Domains.PaymentMethod", b =>
+            modelBuilder.Entity("Domains.PaymentTransaction", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("(newid())");
-
-                    b.Property<double?>("Commission")
-                        .HasColumnType("float");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("CurrentState")
                         .HasColumnType("int");
 
-                    b.Property<string>("MethdAname")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)")
-                        .HasColumnName("MethdAName");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("MethodEname")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)")
-                        .HasColumnName("MethodEName");
+                    b.Property<decimal>("Amount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime");
+                    b.Property<string>("Gateway")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("OrderId")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TbPaymentMethods");
+                    b.ToTable("PaymentTransactions", (string)null);
                 });
 
             modelBuilder.Entity("Domains.RefreshToken", b =>
@@ -436,14 +433,20 @@ namespace DAL.Migrations
                     b.Property<double>("Height")
                         .HasColumnType("float");
 
+                    b.Property<bool>("IsPaid")
+                        .HasColumnType("bit");
+
                     b.Property<double>("Length")
                         .HasColumnType("float");
 
                     b.Property<decimal>("PackageValue")
                         .HasColumnType("decimal(8, 4)");
 
-                    b.Property<Guid?>("PaymentMethodId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("PaymentGateway")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentReference")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("ReceiverId")
                         .HasColumnType("uniqueidentifier");
@@ -487,8 +490,6 @@ namespace DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CarrierId");
-
-                    b.HasIndex("PaymentMethodId");
 
                     b.HasIndex("ReceiverId");
 
@@ -953,11 +954,6 @@ namespace DAL.Migrations
                         .HasForeignKey("CarrierId")
                         .HasConstraintName("FK_TbShipments_TbCarriers");
 
-                    b.HasOne("Domains.PaymentMethod", "PaymentMethod")
-                        .WithMany("TbShipments")
-                        .HasForeignKey("PaymentMethodId")
-                        .HasConstraintName("FK_TbShipments_TbPaymentMethods");
-
                     b.HasOne("Domains.UserReciver", "Receiver")
                         .WithMany("TbShipments")
                         .HasForeignKey("ReceiverId")
@@ -983,8 +979,6 @@ namespace DAL.Migrations
                         .HasConstraintName("FK_TbShipments_TbShipingTypes");
 
                     b.Navigation("Carrier");
-
-                    b.Navigation("PaymentMethod");
 
                     b.Navigation("Receiver");
 
@@ -1109,11 +1103,6 @@ namespace DAL.Migrations
             modelBuilder.Entity("Domains.Country", b =>
                 {
                     b.Navigation("TbCities");
-                });
-
-            modelBuilder.Entity("Domains.PaymentMethod", b =>
-                {
-                    b.Navigation("TbShipments");
                 });
 
             modelBuilder.Entity("Domains.ShipingPackging", b =>

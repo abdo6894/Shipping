@@ -150,15 +150,23 @@ namespace DAL.Repositories.Implementations
 
         public async Task<bool> Update(T entity)
         {
-
             try
             {
                 var dbData = await GetById(entity.Id);
-                entity.CreatedDate = dbData.CreatedDate;
-                entity.CreatedBy = dbData.CreatedBy;
-                entity.UpdatedDate = DateTime.Now;
-                entity.CurrentState = dbData.CurrentState;
-                _context.Entry(entity).State = EntityState.Modified;
+                if (dbData == null)
+                    return false;
+
+                var oldState = dbData.CurrentState;
+                var oldCreatedBy = dbData.CreatedBy;
+                var oldCreatedDate = dbData.CreatedDate;
+
+                _context.Entry(dbData).CurrentValues.SetValues(entity);
+
+                dbData.CurrentState = oldState;
+                dbData.CreatedBy = oldCreatedBy;
+                dbData.CreatedDate = oldCreatedDate;
+                dbData.UpdatedDate = DateTime.UtcNow;
+
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -167,6 +175,9 @@ namespace DAL.Repositories.Implementations
                 throw new DataAccessException(ex, $"Error Updating for entity of type {typeof(T).Name}", _log);
             }
         }
+
+
+
         public async Task<bool> Update(Guid Id, Action<T> updateAction)
         {
             try
@@ -174,9 +185,7 @@ namespace DAL.Repositories.Implementations
                 var entity = await _dbSet.FirstOrDefaultAsync(a => a.Id == Id);
                 if (entity == null)
                     return false;
-
                 updateAction(entity);
-                _context.Entry(entity).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
                 return true;
             }

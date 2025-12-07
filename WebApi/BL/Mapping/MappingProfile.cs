@@ -11,7 +11,6 @@ public class MappingProfile : Profile
         CreateMap<RefreshToken, RefreshTokenDto>().ReverseMap();
         CreateMap<Country, CountryDto>().ReverseMap();
         CreateMap<Carrier, CarrierDto>().ReverseMap();
-        CreateMap<PaymentMethod, PaymentMethodDto>().ReverseMap();
         CreateMap<Setting, SettingDto>().ReverseMap();
         CreateMap<ShipingType, ShipingTypeDto>().ReverseMap();
         CreateMap<ShipingPackging, ShipingPackgingDto>().ReverseMap();
@@ -22,7 +21,6 @@ public class MappingProfile : Profile
          .ForMember(dest => dest.ReciverData, opt => opt.MapFrom(src => src.Receiver))
          .ReverseMap()
          .ForMember(dest => dest.CurrentState, opt => opt.Ignore());
-
 
         // UserSender
         CreateMap<UserSender, UserSenderDto>()

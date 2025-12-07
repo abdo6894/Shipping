@@ -58,12 +58,43 @@ function renderShipments(data) {
             return;
         }
 
-        console.log("Array? true length:", data.length);
-
         var tbody = $("#shipments-table-body");
         tbody.empty();
 
         data.forEach(function (shipment, index) {
+            // هل الشحنة مدفوعة ولا لا
+            var isPaid = shipment.IsPaid === true || shipment.IsPaid === "true";
+
+            // ===== خلية حالة الدفع (Payment Status) =====
+            var paymentCellHtml = "";
+            if (isPaid) {
+                // مدفوع: يظهر "Paid" بس من غير لينك
+                paymentCellHtml = `
+                    <span class="badge badge-success">Paid</span>
+                `;
+            } else {
+                // مش مدفوع: يظهر "Not Paid" وينفع يضغط عشان يدفع
+                paymentCellHtml = `
+                    <a href="#" class="pay-shipment" data-id="${shipment.Id}">
+                        <span class="badge badge-warning">Not Paid</span>
+                    </a>
+                `;
+            }
+
+            // ===== خلية الأكشن (Action) =====
+            var actionCellHtml = `
+                <a href="#" class="view-shipment" data-id="${shipment.Id}" title="View">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="edit-shipment" data-id="${shipment.Id}" title="Edit" style="margin-left:10px;">
+                    <i class="fa fa-edit" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="delete-shipment" data-id="${shipment.Id}" title="Delete" style="margin-left:10px;">
+                    <i class="fa fa-square"></i>
+                </a>
+            `;
+
+            // ===== الصف كامل =====
             var row = `
                 <tr>
                     <td>${index + 1}</td>
@@ -72,26 +103,23 @@ function renderShipments(data) {
                     <td>${formatCurrency(shipment.ShipingRate)}</td>
                     <td>${shipment.SenderData?.SenderName ?? ''}</td>
                     <td>${shipment.ReciverData?.ReceiverName ?? ''}</td>
-                    <td>
-                        <a href="#" class="view-shipment" data-id="${shipment.Id}" title="View">
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="edit-shipment" data-id="${shipment.Id}" title="Edit" style="margin-left:10px;">
-                            <i class="fa fa-edit" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="delete-shipment" data-id="${shipment.Id}" title="Delete" style="margin-left:10px;">
-                            <i class="fa fa-square"></i>
-                        </a>
-                    </td>      
+
+                    <!-- Payment Status -->
+                    <td>${paymentCellHtml}</td>
+
+                    <!-- Action -->
+                    <td>${actionCellHtml}</td>
                 </tr>
             `;
             tbody.append(row);
         });
+
     } catch (err) {
         console.error("❌ Error inside renderShipments:", err);
         console.error(err.stack);
     }
 }
+
 
 function renderPagination(pageResult, currentPage) {
     var paginationDiv = $("#pagination");
@@ -169,4 +197,14 @@ $(document).on("click", ".delete-shipment", function (e) {
 
     const path = getControllerPath();
     window.location.href = `${path}/Delete?id=${shipmentId}`;
+});
+
+
+$(document).on("click", ".pay-shipment", function (e) {
+    e.preventDefault();
+
+    const shipmentId = $(this).data("id");
+    if (!shipmentId) return;
+
+    window.location.href = `/Home/Payment?shipmentId=${shipmentId}`;
 });

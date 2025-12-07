@@ -62,6 +62,45 @@ const ShipmentService = {
         return shipmentDto;
     },
 
+    CreateAndReturnId: async function () {
+        const dto = ShipmentService.GetModel();
+        console.log("log data before send");
+        console.log(dto);
+
+        return new Promise((resolve, reject) => {
+            ApiClient.post("/api/Shipments/Create", dto,
+                function (response) {
+                    // ApiResponse<object> -> حاول تستخلص Id
+                    // لو الـ Create بيرجع Guid مباشرة في Data
+                    const id =
+                        response?.data?.id ||
+                        response?.data ||
+                        response?.Id ||
+                        null;
+
+                    if (!id) {
+                        console.error("Cannot find shipment Id in response:", response);
+                        return resolve(null);
+                    }
+                    resolve(id);
+                },
+                function (xhr) {
+                    console.error("API Error:", xhr.responseJSON);
+                    resolve(null);
+                });
+        });
+    },
+
+    SaveShippment: function () {
+        let data = ShipmentService.GetModel();
+        console.log("log data before send");
+        console.log(data);
+        ApiClient.post("/api/Shipments/Create", data,
+            function (data) { }, function (xhr) {
+                console.error("API Error:", xhr.responseJSON);
+            });
+    },
+
     FillShipmentForm: function (data)
     {
         console.log("CurrentState from API:", data.CurrentState);

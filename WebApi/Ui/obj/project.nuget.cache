@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Zl/Rj6AyKXw=",
+  "dgSpecHash": "3XELaVBlFo0=",
   "success": true,
   "projectFilePath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\Ui\\Ui.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\win11\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\maxmind.db\\4.3.4\\maxmind.db.4.3.4.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\maxmind.geoip2\\5.4.1\\maxmind.geoip2.5.4.1.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.aspnetcore.identity\\2.3.1\\microsoft.aspnetcore.identity.2.3.1.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\9.0.9\\microsoft.aspnetcore.identity.entityframeworkcore.9.0.9.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
@@ -33,7 +35,10 @@
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.9\\microsoft.entityframeworkcore.sqlserver.9.0.9.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.9\\microsoft.entityframeworkcore.tools.9.0.9.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0\\microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.9\\microsoft.extensions.dependencymodel.9.0.9.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\microsoft.extensions.options\\10.0.0\\microsoft.extensions.options.10.0.0.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.0\\microsoft.extensions.primitives.10.0.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.identity.client\\4.73.1\\microsoft.identity.client.4.73.1.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\4.61.3\\microsoft.identity.client.extensions.msal.4.61.3.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.35.0\\microsoft.identitymodel.abstractions.6.35.0.nupkg.sha512",
@@ -56,6 +61,7 @@
     "C:\\Users\\win11\\.nuget\\packages\\serilog.sinks.debug\\3.0.0\\serilog.sinks.debug.3.0.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\serilog.sinks.file\\6.0.0\\serilog.sinks.file.6.0.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\serilog.sinks.mssqlserver\\8.2.2\\serilog.sinks.mssqlserver.8.2.2.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\stripe.net\\50.0.0\\stripe.net.50.0.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.5\\swashbuckle.aspnetcore.9.0.5.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.5\\swashbuckle.aspnetcore.swagger.9.0.5.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.5\\swashbuckle.aspnetcore.swaggergen.9.0.5.nupkg.sha512",
@@ -68,11 +74,11 @@
     "C:\\Users\\win11\\.nuget\\packages\\system.composition.hosting\\7.0.0\\system.composition.hosting.7.0.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\system.composition.runtime\\7.0.0\\system.composition.runtime.7.0.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\system.composition.typedparts\\7.0.0\\system.composition.typedparts.7.0.0.nupkg.sha512",
-    "C:\\Users\\win11\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.1\\system.configuration.configurationmanager.8.0.1.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0\\system.configuration.configurationmanager.9.0.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.35.0\\system.identitymodel.tokens.jwt.6.35.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\system.runtime.caching\\8.0.0\\system.runtime.caching.8.0.0.nupkg.sha512",
-    "C:\\Users\\win11\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+    "C:\\Users\\win11\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.0\\system.security.cryptography.protecteddata.9.0.0.nupkg.sha512"
   ],
   "logs": [
     {
