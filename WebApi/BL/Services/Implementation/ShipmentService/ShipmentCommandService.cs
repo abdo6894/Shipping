@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.Services;
+namespace BL.Services.Implementation.ShipmentService;
 
 public class ShipmentCommandService : GenericService<Shipment, ShipmentDto>, IShipmentCommand
 {
@@ -116,7 +116,7 @@ public class ShipmentCommandService : GenericService<Shipment, ShipmentDto>, ISh
             var reciverResult = await _userReceiver.Update(dto.ReciverData);
 
             // تحديث الشحنة
-            await this.Update(dto);
+            await Update(dto);
 
             await _uow.CommitAsync();
             return true;

@@ -71,7 +71,7 @@ namespace WebApi.Controllers
             {
                 Id = user.Id,
                 Email = user.Email,
-                Role = user.Role   // الرول الحقيقي من الداتابيز (Admin / Reviwer / ...)
+                Role = user.Role   
             };
 
             var accessToken =  _tokenService.GenerateAccessToken(userToken);
@@ -131,7 +131,7 @@ namespace WebApi.Controllers
             {
                 HttpOnly = false,
                 Secure = true,
-                Expires = DateTime.UtcNow.AddMinutes(15)  // Adjust token expiry based on your needs
+                Expires = DateTime.UtcNow.AddMinutes(15)  
             });
             return Ok(new
                 {

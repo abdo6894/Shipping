@@ -31,9 +31,9 @@
             ? { 'Authorization': 'Bearer ' + accessToken }
             : {};
 
-        console.log("AccessToken from cookie:", accessToken);
-        console.log("Headers sent from ApiClient.post:", headers);
-        console.log("Full URL:", this.baseUrl + url);
+        //console.log("AccessToken from cookie:", accessToken);
+        //console.log("Headers sent from ApiClient.post:", headers);
+        //console.log("Full URL:", this.baseUrl + url);
 
         $.ajax({
             url: this.baseUrl + url,

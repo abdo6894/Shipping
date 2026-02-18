@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.Services;
+namespace BL.Services.Implementation.ShipmentService;
 
 
     public class CalculateRateService : ICalculateRateService

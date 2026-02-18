@@ -39,7 +39,7 @@ namespace Ui.Services
                 return new UserResultDto
                 {
                     Success = false,
-                    Errors = result.Errors?.Select(e => e.Description)
+                    Errors = result.Errors?.Select(e => e.Description)!
                 };
             }
                 var roleResult = await _userManager.AddToRoleAsync(user, registerDto.Role ?? "User");
@@ -49,14 +49,14 @@ namespace Ui.Services
                 return new UserResultDto
                 {
                     Success = false,
-                    Errors = roleResult.Errors?.Select(e => e.Description)
+                    Errors = roleResult.Errors?.Select(e => e.Description)!
                 };
             }
 
             return new UserResultDto
             {
                 Success = result.Succeeded,
-                Errors = result.Errors?.Select(e => e.Description)
+                Errors = result.Errors?.Select(e => e.Description)!
             };
         }
                 
@@ -128,7 +128,7 @@ namespace Ui.Services
         public Guid GetLoggedInUser()
         {
             var userId = _httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
-            return Guid.Parse(userId);
+            return Guid.Parse(userId!);
         }
 
      

@@ -12,6 +12,7 @@ using Ui.Models;
 
 namespace Ui.Controllers
 {
+    [Authorize]
     public class ShipmentController : Controller
     {
         private readonly IShipmentQuery _shipmentQuery;
@@ -22,12 +23,12 @@ namespace Ui.Controllers
             _logger = logger;
             _shipmentQuery = shipmentService;
         }
-        [Authorize]
+       
         public IActionResult Index()
         {
             return View();
         }
-        [Authorize]
+    
         public IActionResult Create()
         {
             return View();

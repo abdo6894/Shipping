@@ -2,7 +2,6 @@
 using BL.Contract;
 using BL.DependencyInjection;
 using BL.Mapping;
-using BL.Services;
 using BL.Services.Implementation;
 using BL.Services.Implementation.Generic;
 using BL.Services.Implementation.MaxMind_Ip;
@@ -75,10 +74,18 @@ namespace Ui.Services
                options.ExpireTimeSpan = TimeSpan.FromDays(7);
            });
 
-            // Sql Server
+            // Sql Server with transient error retry
             builder.Services.AddDbContext<ShipingContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("DefaultConnection"),
+                    sqlOptions => sqlOptions.EnableRetryOnFailure(
+                        maxRetryCount: 5,                       // أقصى عدد محاولات
+                        maxRetryDelay: TimeSpan.FromSeconds(10), // أقصى تأخير بين المحاولات
+                        errorNumbersToAdd: null                  // لو عايز تضيف أكواد خطأ معينة، سيبه null عادة
+                    )
+                )
             );
+
 
             // Identity
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>

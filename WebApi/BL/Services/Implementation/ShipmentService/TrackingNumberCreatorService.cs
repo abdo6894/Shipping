@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.Services.Interfaces.IShipment;
+namespace BL.Services.Implementation.ShipmentService;
 
 public class TrackingNumberCreatorService : ITrackingNumberCreatorService
 {

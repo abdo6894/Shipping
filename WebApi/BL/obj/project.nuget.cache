@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dXZVqyuuQMs=",
+  "dgSpecHash": "iqmgySYvMDE=",
   "success": true,
   "projectFilePath": "D:\\MyProjects\\FullProject\\Shipping\\WebApi\\BL\\BL.csproj",
   "expectedPackageFiles": [
@@ -53,7 +53,10 @@
     "C:\\Users\\win11\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\system.runtime.caching\\6.0.0\\system.runtime.caching.6.0.0.nupkg.sha512",
     "C:\\Users\\win11\\.nuget\\packages\\system.security.cryptography.cng\\5.0.0\\system.security.cryptography.cng.5.0.0.nupkg.sha512",
-    "C:\\Users\\win11\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.0\\system.security.cryptography.protecteddata.9.0.0.nupkg.sha512"
+    "C:\\Users\\win11\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.0\\system.security.cryptography.protecteddata.9.0.0.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.13\\microsoft.windowsdesktop.app.ref.9.0.13.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.13\\microsoft.netcore.app.ref.9.0.13.nupkg.sha512",
+    "C:\\Users\\win11\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.13\\microsoft.aspnetcore.app.ref.9.0.13.nupkg.sha512"
   ],
   "logs": []
 }

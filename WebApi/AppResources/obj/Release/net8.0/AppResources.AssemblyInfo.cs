@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppResources")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+460205b0670e94ce3dda259e2a34491e47dfcfe7")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppResources")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppResources")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
